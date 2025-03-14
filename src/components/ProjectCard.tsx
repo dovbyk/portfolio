@@ -85,30 +85,31 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         </div>
       </div>
 
-      {/* Video Modal */}
-      {isVideoModalOpen && currentVideo && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-75 p-4">
-          <div className="relative w-[90%] max-w-5xl bg-gray-900 rounded-lg shadow-lg">
-            {/* Close Button */}
-            <button
-              onClick={() => setIsVideoModalOpen(false)}
-              className="absolute -top-10 right-0 text-gray-400 hover:text-white p-2 rounded-full bg-gray-800 hover:bg-gray-700 transition-colors"
-            >
-              <X size={24} />
-            </button>
-            
-            {/* Video Player */}
-            <video
-              src={currentVideo}
-              controls
-              className="w-full rounded-lg"
-              autoPlay
-            >
-              Your browser does not support the video tag.
-            </video>
-          </div>
-        </div>
-      )}
+     {isVideoModalOpen && currentVideo && (
+  <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-75 p-4">
+    <div className="relative w-[70%] max-w-3xl bg-gray-900 rounded-lg shadow-lg">
+      {/* Close Button */}
+      <button
+        onClick={() => {
+          setIsVideoModalOpen(false);
+          setCurrentVideo(null);
+        }}
+        className="absolute -top-10 right-0 bg-gray-800 text-white p-2 rounded-full hover:bg-gray-700 transition"
+      >
+        <X size={24} />
+      </button>
+
+      {/* Video Player */}
+      <video
+        src={currentVideo!}
+        controls
+        className="w-full rounded-lg"
+        autoPlay
+      />
+    </div>
+  </div>
+)}
+
     </div>
   );
 };
