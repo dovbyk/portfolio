@@ -64,7 +64,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                 setCurrentVideo(demoLink);
                 setIsVideoModalOpen(true);
               }}
-              className="px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white flex items-center gap-2 rounded-md transition"
+              className="px-4 py-2 bg-gray-800 hover:bg-gray-700 text-white rounded-md flex items-center gap-2 transition"
             >
               <span>Live Demo</span>
               <ExternalLink size={16} />
