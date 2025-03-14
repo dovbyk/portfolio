@@ -32,7 +32,7 @@ const About: React.FC = () => {
             </div>
             
             <AnimatedText
-              text="Passionate Computer Science Student"
+              text="Aryan Sharma Gaire"
               el="h2"
               className="text-3xl md:text-4xl font-bold mb-6 font-agency"
               animation="slide-up"
