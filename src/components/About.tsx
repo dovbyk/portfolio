@@ -6,16 +6,15 @@ import { Button } from './ui/button';
 
 const About: React.FC = () => {
   const skills = [
-    'JavaScript/TypeScript', 
+    'Python', 
     'React.js', 
     'Node.js', 
-    'Python',
+    'JavaScript/TypeScript',
     'Java', 
     'SQL/NoSQL',
     'AWS Cloud',
-    'Docker',
-    'Git/GitHub',
-    'UI/UX Design'
+    'LINUX',
+    'Git/GitHub'
   ];
 
   return (
@@ -81,14 +80,16 @@ const About: React.FC = () => {
               </div>
             </div>
             
-            <div className="mt-8">
-              <Button variant="outline" className="mt-4 flex items-center gap-2 border-white/20 hover:bg-white/10">
-                <Download size={16} />
-                <span>Download Resume</span>
-              </Button>
-            </div>
-          </div>
-          
+          <div className="mt-8">
+           <Button
+             variant="outline"
+             className="mt-4 flex items-center gap-2 border-white/20 hover:bg-white/10"
+            onClick={() => window.open('/resume.pdf', '_blank')}
+           >
+           <span>View Resume</span>
+          </Button>
+        </div>
+
   {/* Right Column - Image */}
           <div className="w-full lg:w-5/12 mb-12 lg:mb-0 flex-shrink-0">
             <div className="relative" style={{ opacity: 0, animation: 'fade-in 0.8s ease-out forwards' }}>
