@@ -90,9 +90,9 @@ const About: React.FC = () => {
           </div>
           
           {/* Right Column - Image */}
-<div className="w-full lg:w-5/12 mb-12 lg:mb-0 flex-shrink-0 flex justify-center">
+<div className="w-full lg:w-5/12 mb-12 lg:mb-0 flex justify-center">
   <div 
-    className="relative w-40 h-40 lg:w-48 lg:h-48 rounded-full border border-white/10 overflow-hidden" 
+    className="relative w-32 h-32 lg:w-40 lg:h-40 rounded-full border border-white/10 overflow-hidden flex items-center justify-center" 
     style={{ opacity: 0, animation: 'fade-in 0.8s ease-out forwards' }}
   >
     <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-full"></div>
@@ -103,6 +103,7 @@ const About: React.FC = () => {
     />
   </div>
 </div>
+
 
               
               {/* Decorative elements */}
