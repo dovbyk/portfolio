@@ -82,13 +82,13 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 
       {/* Video Modal */}
       {showVideo && (
-        <div className="fixed inset-0 bg-black/60 flex justify-center items-center z-50">
-          <div className="relative bg-gray-900 p-4 rounded-lg w-1/2">
+        <div className="fixed inset-0 bg-black/70 flex justify-center items-center z-50">
+          <div className="relative bg-gray-900 p-4 rounded-lg w-[60%] max-w-3xl">
             <button 
               className="absolute top-2 right-2 text-white hover:text-gray-400"
               onClick={() => setShowVideo(false)}
             >
-              <X size={20} />
+              <X size={30} />
             </button>
             <video controls className="w-full rounded-lg">
               <source src={demoLink} type="video/mp4" />
