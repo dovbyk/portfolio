@@ -85,32 +85,30 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         </div>
       </div>
 
-{isVideoModalOpen && currentVideo && (
-  <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-75 p-4">
-    <div className="relative w-[80%] max-w-5xl bg-gray-900 rounded-lg shadow-xl">
-      {/* Close Button */}
-      <button
-        onClick={() => {
-          setIsVideoModalOpen(false);
-          setCurrentVideo(null);
-        }}
-        className="absolute -top-10 right-0 bg-gray-800 text-white p-2 rounded-full hover:bg-gray-700 transition"
-      >
-        <X size={24} />
-      </button>
+      {isVideoModalOpen && currentVideo && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-75 p-4">
+          <div className="relative w-[90%] max-w-6xl h-[70vh] bg-gray-900 rounded-lg shadow-xl">
+            {/* Close Button */}
+            <button
+              onClick={() => {
+                setIsVideoModalOpen(false);
+                setCurrentVideo(null);
+              }}
+              className="absolute -top-10 right-0 bg-gray-800 text-white p-2 rounded-full hover:bg-gray-700 transition"
+            >
+              <X size={24} />
+            </button>
 
-      {/* Video Player - Large */}
-      <video
-        src={currentVideo!}
-        controls
-        className="w-full h-auto rounded-lg"
-        autoPlay
-      />
-    </div>
-  </div>
-)}
-
-
+            {/* Video Player - Increased Size */}
+            <video
+              src={currentVideo!}
+              controls
+              className="w-full h-full rounded-lg object-contain"
+              autoPlay
+            />
+          </div>
+        </div>
+      )}
     </div>
   );
 };
