@@ -97,7 +97,7 @@ const About: React.FC = () => {
   >
     <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-full"></div>
     <img 
-      src="/img3.jpg" 
+      src="/img.jpeg" 
       alt="CS Student Profile" 
       className="w-full h-full object-cover object-center rounded-full"
     />
