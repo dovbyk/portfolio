@@ -8,7 +8,7 @@ const Projects: React.FC = () => {
     {
       title: "AI-Powered Study Assistant",
       description: "A machine learning application that helps students organize notes and study materials with AI-generated summaries.",
-      image: "https://images.unsplash.com/photo-1591453089816-0fbb971b454c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+      image: "https://images.unsplash.com/photo-1678163070000-bd6a36d620e5?q=80&w=1000&auto=format&fit=crop",
       tags: ["Python", "Machine Learning", "React"],
       demoLink: "https://example.com",
       codeLink: "https://github.com/example",
@@ -16,7 +16,7 @@ const Projects: React.FC = () => {
     {
       title: "E-commerce Platform",
       description: "A full-featured online store with secure payment integration, user accounts, and an intuitive shopping experience.",
-      image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+      image: "https://images.unsplash.com/photo-1661956602944-249bcd04b63f?q=80&w=1000&auto=format&fit=crop",
       tags: ["React.js", "Node.js", "MongoDB"],
       demoLink: "https://example.com",
       codeLink: "https://github.com/example",
@@ -24,7 +24,7 @@ const Projects: React.FC = () => {
     {
       title: "Smart Home Dashboard",
       description: "A centralized control system for IoT devices, featuring real-time monitoring and automated routines.",
-      image: "https://images.unsplash.com/photo-1558346490-a72e53ae2d4f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+      image: "https://images.unsplash.com/photo-1675351066828-6bbd07beea0d?q=80&w=1000&auto=format&fit=crop",
       tags: ["IoT", "React", "TypeScript"],
       demoLink: "https://example.com",
       codeLink: "https://github.com/example",

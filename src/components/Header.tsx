@@ -29,7 +29,7 @@ const Header: React.FC = () => {
       )}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
-        <a href="#" className="text-2xl md:text-3xl font-poppins font-bold text-white">
+        <a href="#" className="text-2xl md:text-3xl font-agency font-bold text-white">
           Portfolio<span className="text-[#3B82F6]">.</span>
         </a>
 
@@ -63,28 +63,28 @@ const Header: React.FC = () => {
         <nav className="flex flex-col space-y-8 items-center">
           <a 
             href="#home" 
-            className="text-xl text-white/80 hover:text-white transition-colors" 
+            className="text-xl text-white/80 hover:text-white transition-colors font-agency" 
             onClick={toggleMobileMenu}
           >
             Home
           </a>
           <a 
             href="#about" 
-            className="text-xl text-white/80 hover:text-white transition-colors" 
+            className="text-xl text-white/80 hover:text-white transition-colors font-agency" 
             onClick={toggleMobileMenu}
           >
             About
           </a>
           <a 
             href="#projects" 
-            className="text-xl text-white/80 hover:text-white transition-colors" 
+            className="text-xl text-white/80 hover:text-white transition-colors font-agency" 
             onClick={toggleMobileMenu}
           >
             Projects
           </a>
           <a 
             href="#contact" 
-            className="text-xl text-white/80 hover:text-white transition-colors" 
+            className="text-xl text-white/80 hover:text-white transition-colors font-agency" 
             onClick={toggleMobileMenu}
           >
             Contact
