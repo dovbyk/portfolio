@@ -87,7 +87,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 
       {isVideoModalOpen && currentVideo && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-75 p-4">
-          <div className="relative w-[300%] max-w-3xl h-[100px] bg-gray-900 rounded-lg shadow-xl">
+          <div className="relative w-[800%] max-w-3xl h-[100px] bg-gray-900 rounded-lg shadow-xl">
             {/* Close Button */}
             <button
               onClick={() => {
