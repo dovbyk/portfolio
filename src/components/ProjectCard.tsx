@@ -26,7 +26,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 
   return (
     <div 
-      className="relative group bg-gray-900 p-6 rounded-2xl transition-transform transform-gpu hover:scale-[1.05] shadow-lg hover:shadow-2xl"
+      className="relative group bg-black-900 p-6 rounded-2xl transition-transform transform-gpu hover:scale-[1.05] shadow-lg hover:shadow-2xl"
       style={{ opacity: 0, animation: `fade-in 0.8s ease-out ${0.2 * index}s forwards` }}
     >
       {/* Image Section with Hover Effect */}
