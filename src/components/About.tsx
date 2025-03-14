@@ -89,6 +89,7 @@ const About: React.FC = () => {
            <span>View Resume</span>
           </Button>
         </div>
+        </div>
 
   {/* Right Column - Image */}
           <div className="w-full lg:w-5/12 mb-12 lg:mb-0 flex-shrink-0">
