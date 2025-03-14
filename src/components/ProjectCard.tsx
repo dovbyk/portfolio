@@ -6,7 +6,7 @@ interface ProjectCardProps {
   description: string;
   image: string;
   tags: string[];
-  demoLink?: string; // This will now be a video link
+  demoLink?: string; // Video link
   codeLink?: string;
   index: number;
 }
@@ -20,7 +20,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   codeLink,
   index,
 }) => {
-  const [showVideo, setShowVideo] = useState(false);
+  // State for video modal
+  const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
+  const [currentVideo, setCurrentVideo] = useState<string | null>(null);
 
   return (
     <div 
@@ -58,7 +60,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         <div className="flex items-center gap-4 mt-4">
           {demoLink && (
             <button
-              onClick={() => setShowVideo(true)}
+              onClick={() => {
+                setCurrentVideo(demoLink);
+                setIsVideoModalOpen(true);
+              }}
               className="px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white flex items-center gap-2 rounded-md transition"
             >
               <span>Live Demo</span>
@@ -81,17 +86,24 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       </div>
 
       {/* Video Modal */}
-      {showVideo && (
-        <div className="fixed inset-0 bg-black/70 flex justify-center items-center z-50">
-          <div className="relative bg-gray-900 p-4 rounded-lg w-[60%] max-w-3xl">
-            <button 
-              className="absolute top-2 right-2 text-white hover:text-gray-400"
-              onClick={() => setShowVideo(false)}
+      {isVideoModalOpen && currentVideo && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-75 p-4">
+          <div className="relative w-full max-w-4xl bg-gray-900 rounded-lg">
+            {/* Close Button */}
+            <button
+              onClick={() => setIsVideoModalOpen(false)}
+              className="absolute -top-10 right-0 text-gray-400 hover:text-white p-2 rounded-full bg-gray-800 hover:bg-gray-700 transition-colors"
             >
-              <X size={30} />
+              <X size={24} />
             </button>
-            <video controls className="w-full rounded-lg">
-              <source src={demoLink} type="video/mp4" />
+            
+            {/* Video Player */}
+            <video
+              src={currentVideo}
+              controls
+              className="w-full rounded-lg"
+              autoPlay
+            >
               Your browser does not support the video tag.
             </video>
           </div>
