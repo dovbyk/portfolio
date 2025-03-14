@@ -199,7 +199,7 @@ const Contact: React.FC = () => {
                     disabled={isSubmitting}
                     className={cn(
                       "w-full flex items-center justify-center gap-2 py-3 rounded-lg font-medium transition-all duration-300",
-  "bg-black text-white hover:bg-gray-800",
+  "bg-black text-white hover:bg-gray-800 font-agency",
                       isSubmitting && "opacity-70 cursor-not-allowed"
                     )}
 
