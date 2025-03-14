@@ -1,14 +1,12 @@
-
-import React from 'react';
-import { cn } from '@/lib/utils';
-import { ExternalLink, Github } from 'lucide-react';
+import React, { useState } from 'react';
+import { ExternalLink, Github, X } from 'lucide-react';
 
 interface ProjectCardProps {
   title: string;
   description: string;
   image: string;
   tags: string[];
-  demoLink?: string;
+  demoLink?: string; // This will now be a video link
   codeLink?: string;
   index: number;
 }
@@ -22,54 +20,50 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   codeLink,
   index,
 }) => {
+  const [showVideo, setShowVideo] = useState(false);
+
   return (
     <div 
-      className="group relative overflow-hidden rounded-xl border border-white/10 hover:border-white/20 transition-all duration-300"
-      style={{ 
-        opacity: 0, 
-        transform: 'translateY(20px)',
-        animation: `fade-in 0.8s ease-out ${0.2 * index}s forwards`
-      }}
+      className="relative group bg-gray-900 p-6 rounded-2xl transition-transform transform-gpu hover:scale-[1.05] shadow-lg hover:shadow-2xl"
+      style={{ opacity: 0, animation: `fade-in 0.8s ease-out ${0.2 * index}s forwards` }}
     >
-      {/* Project Image with Overlay */}
-      <div className="relative aspect-video overflow-hidden">
+      {/* Image Section with Hover Effect */}
+      <div className="relative aspect-video overflow-hidden rounded-lg">
         <img 
           src={image} 
           alt={title} 
-          className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-110" 
+          className="w-full h-full object-cover transition-transform duration-300 transform group-hover:scale-105 rounded-lg"
         />
-        <div className="absolute inset-0 bg-black/50 transition-opacity duration-300 group-hover:opacity-30"></div>
+        <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-50 transition-opacity"></div>
+      </div>
+
+      {/* Content */}
+      <div className="mt-4">
+        <h3 className="text-white text-xl font-semibold">{title}</h3>
+        <p className="text-white/70 mt-2">{description}</p>
         
         {/* Tags */}
-        <div className="absolute top-4 left-4 flex gap-2 flex-wrap max-w-[calc(100%-32px)] z-10">
+        <div className="mt-3 flex flex-wrap gap-2">
           {tags.map((tag, idx) => (
             <span 
               key={idx} 
-              className="px-2 py-1 text-xs font-medium bg-black/60 backdrop-blur-sm text-white/90 rounded-full"
+              className="px-2 py-1 text-xs font-medium bg-black/60 backdrop-blur-sm text-white/90 rounded"
             >
               {tag}
             </span>
           ))}
         </div>
-      </div>
-      
-      {/* Content */}
-      <div className="p-6">
-        <h3 className="text-xl font-semibold mb-2 transition-colors duration-300 group-hover:text-white text-white/90 font-agency">{title}</h3>
-        <p className="text-white/70 mb-6">{description}</p>
-        
-        {/* Links */}
-        <div className="flex items-center gap-4">
+
+        {/* Buttons for Links */}
+        <div className="flex items-center gap-4 mt-4">
           {demoLink && (
-            <a 
-              href={demoLink} 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 text-white/80 hover:text-white transition-colors"
+            <button
+              onClick={() => setShowVideo(true)}
+              className="px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white flex items-center gap-2 rounded-md transition"
             >
-              <ExternalLink size={16} />
               <span>Live Demo</span>
-            </a>
+              <ExternalLink size={16} />
+            </button>
           )}
           
           {codeLink && (
@@ -77,7 +71,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
               href={codeLink} 
               target="_blank" 
               rel="noopener noreferrer"
-              className="flex items-center gap-2 text-white/80 hover:text-white transition-colors"
+              className="px-4 py-2 bg-gray-800 hover:bg-gray-700 text-white rounded-md flex items-center gap-2 transition"
             >
               <Github size={16} />
               <span>View Code</span>
@@ -85,11 +79,24 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           )}
         </div>
       </div>
-      
-      {/* Hover Effect - Gradient Border */}
-      <div className="absolute inset-0 border-2 border-transparent rounded-xl transition-all duration-300 opacity-0 group-hover:opacity-100" 
-        style={{ background: 'linear-gradient(90deg, #3b82f6, #8b5cf6) border-box' }}>
-      </div>
+
+      {/* Video Modal */}
+      {showVideo && (
+        <div className="fixed inset-0 bg-black/60 flex justify-center items-center z-50">
+          <div className="relative bg-gray-900 p-4 rounded-lg w-1/2">
+            <button 
+              className="absolute top-2 right-2 text-white hover:text-gray-400"
+              onClick={() => setShowVideo(false)}
+            >
+              <X size={20} />
+            </button>
+            <video controls className="w-full rounded-lg">
+              <source src={demoLink} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
