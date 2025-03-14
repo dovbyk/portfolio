@@ -199,10 +199,11 @@ const Contact: React.FC = () => {
                     disabled={isSubmitting}
                     className={cn(
                       "w-full flex items-center justify-center gap-2 py-3 rounded-lg font-medium transition-all duration-300",
-                      "bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white",
+  "bg-black text-white hover:bg-gray-800",
                       isSubmitting && "opacity-70 cursor-not-allowed"
                     )}
-                  >
+
+                    >
                     {isSubmitting ? (
                       <>
                         <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
