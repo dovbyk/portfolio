@@ -35,13 +35,13 @@ const Hero: React.FC = () => {
         <div className="flex flex-col md:flex-row gap-4 justify-center mb-20 mt-8" style={{ opacity: 0, animation: 'fade-in 0.8s ease-out 0.6s forwards' }}>
           <a 
             href="#projects" 
-            className="px-8 py-4 rounded-lg bg-white text-black font-medium transition-transform hover:scale-105 hover:shadow-[0_0_15px_rgba(255,255,255,0.3)] duration-300 font-agency text-2xl"
+            className="px-8 py-4 rounded-lg bg-white text-black font-medium transition-transform hover:scale-105 hover:shadow-[0_0_15px_rgba(255,255,255,0.3)] duration-300 font-agency text-xl"
           >
             View My Work
           </a>
           <a 
             href="#contact" 
-            className="px-8 py-4 rounded-lg border border-white/20 text-white hover:bg-white/10 transition-all duration-300 font-agency text-2xl"
+            className="px-8 py-4 rounded-lg border border-white/20 text-white hover:bg-white/10 transition-all duration-300 font-agency text-xl"
           >
             Contact Me
           </a>
