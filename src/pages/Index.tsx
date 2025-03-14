@@ -4,7 +4,7 @@ import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import About from '@/components/About';
 import Projects from '@/components/Projects';
-import Achievements from '@/components/Achievements';
+//import Achievements from '@/components/Achievements';
 import Contact from '@/components/Contact';
 import SmoothScroll from '@/components/SmoothScroll';
 
@@ -17,7 +17,7 @@ const Index = () => {
           <Hero />
           <About />
           <Projects />
-          <Achievements />
+          
           <Contact />
         </main>
         
@@ -27,9 +27,6 @@ const Index = () => {
               <p className="text-white/70 mb-4 md:mb-0">
                 © {new Date().getFullYear()} Portfolio. All rights reserved.
               </p>
-              <div className="text-white/70">
-                <p>Designed & Developed with ❤️</p>
-              </div>
             </div>
           </div>
         </footer>
