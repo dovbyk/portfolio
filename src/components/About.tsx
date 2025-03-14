@@ -110,16 +110,7 @@ const About: React.FC = () => {
               <div className="absolute -bottom-4 -right-4 w-24 h-24 border border-white/20 rounded-lg"></div>
               
               {/* Social links overlay */}
-              <div className="absolute bottom-4 left-4 right-4 p-4 bg-black/50 backdrop-blur-sm rounded-lg">
-                <div className="flex justify-center gap-4">
-                  <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-white transition-colors">
-                    <Github size={24} />
-                  </a>
-                  <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-white transition-colors">
-                    <Linkedin size={24} />
-                  </a>
-                </div>
-              </div>
+            
             </div>
           </div>
         </div>
