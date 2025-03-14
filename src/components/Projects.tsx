@@ -46,7 +46,7 @@ const Projects: React.FC = () => {
           <AnimatedText
             text="Featured Projects"
             el="h2"
-            className="text-3xl md:text-5xl font-bold mb-6"
+            className="text-3xl md:text-5xl font-bold mb-6 font-agency"
             animation="blur-in"
           />
           

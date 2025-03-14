@@ -20,7 +20,7 @@ const Hero: React.FC = () => {
         <AnimatedText
           text="Bringing Ideas to Life with Code"
           el="h1"
-          className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-gradient leading-tight max-w-4xl mx-auto"
+          className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-gradient leading-tight max-w-4xl mx-auto font-agency"
           animation="blur-in"
         />
         
@@ -35,13 +35,13 @@ const Hero: React.FC = () => {
         <div className="flex flex-col md:flex-row gap-4 justify-center mb-20 mt-8" style={{ opacity: 0, animation: 'fade-in 0.8s ease-out 0.6s forwards' }}>
           <a 
             href="#projects" 
-            className="px-8 py-4 rounded-lg bg-white text-black font-medium transition-transform hover:scale-105 hover:shadow-[0_0_15px_rgba(255,255,255,0.3)] duration-300"
+            className="px-8 py-4 rounded-lg bg-white text-black font-medium transition-transform hover:scale-105 hover:shadow-[0_0_15px_rgba(255,255,255,0.3)] duration-300 font-agency"
           >
             View My Work
           </a>
           <a 
             href="#contact" 
-            className="px-8 py-4 rounded-lg border border-white/20 text-white hover:bg-white/10 transition-all duration-300"
+            className="px-8 py-4 rounded-lg border border-white/20 text-white hover:bg-white/10 transition-all duration-300 font-agency"
           >
             Contact Me
           </a>

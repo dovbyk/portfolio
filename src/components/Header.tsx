@@ -35,10 +35,10 @@ const Header: React.FC = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-10">
-          <a href="#home" className="text-white/80 hover:text-white transition-colors font-medium link-underline">Home</a>
-          <a href="#about" className="text-white/80 hover:text-white transition-colors font-medium link-underline">About</a>
-          <a href="#projects" className="text-white/80 hover:text-white transition-colors font-medium link-underline">Projects</a>
-          <a href="#contact" className="text-white/80 hover:text-white transition-colors font-medium link-underline">Contact</a>
+          <a href="#home" className="text-white/80 hover:text-white transition-colors font-medium link-underline font-agency">Home</a>
+          <a href="#about" className="text-white/80 hover:text-white transition-colors font-medium link-underline font-agency">About</a>
+          <a href="#projects" className="text-white/80 hover:text-white transition-colors font-medium link-underline font-agency">Projects</a>
+          <a href="#contact" className="text-white/80 hover:text-white transition-colors font-medium link-underline font-agency">Contact</a>
         </nav>
 
         {/* Mobile Menu Button */}

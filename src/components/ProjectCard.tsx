@@ -33,14 +33,15 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
     >
       {/* Project Image with Overlay */}
       <div className="relative aspect-video overflow-hidden">
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-transform duration-700 group-hover:scale-110" 
-          style={{ backgroundImage: `url(${image})` }}
-        ></div>
+        <img 
+          src={image} 
+          alt={title} 
+          className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-110" 
+        />
         <div className="absolute inset-0 bg-black/50 transition-opacity duration-300 group-hover:opacity-30"></div>
         
         {/* Tags */}
-        <div className="absolute top-4 left-4 flex gap-2 flex-wrap max-w-[calc(100%-32px)]">
+        <div className="absolute top-4 left-4 flex gap-2 flex-wrap max-w-[calc(100%-32px)] z-10">
           {tags.map((tag, idx) => (
             <span 
               key={idx} 
@@ -54,7 +55,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       
       {/* Content */}
       <div className="p-6">
-        <h3 className="text-xl font-semibold mb-2 transition-colors duration-300 group-hover:text-white text-white/90">{title}</h3>
+        <h3 className="text-xl font-semibold mb-2 transition-colors duration-300 group-hover:text-white text-white/90 font-agency">{title}</h3>
         <p className="text-white/70 mb-6">{description}</p>
         
         {/* Links */}

@@ -26,7 +26,7 @@ const About: React.FC = () => {
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="flex flex-col-reverse lg:flex-row items-center gap-16">
-          {/* Left Column - Text Content (switched from right) */}
+          {/* Left Column - Text Content */}
           <div className="w-full lg:w-7/12">
             <div className="inline-block mb-6 px-4 py-1 border border-white/10 rounded-full">
               <span className="text-white/80 text-sm font-medium">ABOUT ME</span>
@@ -89,7 +89,7 @@ const About: React.FC = () => {
             </div>
           </div>
           
-          {/* Right Column - Image (switched from left) */}
+          {/* Right Column - Image */}
           <div className="w-full lg:w-5/12 mb-12 lg:mb-0 flex-shrink-0">
             <div className="relative" style={{ opacity: 0, animation: 'fade-in 0.8s ease-out forwards' }}>
               <div className="aspect-square overflow-hidden rounded-2xl relative border border-white/10">
@@ -99,24 +99,23 @@ const About: React.FC = () => {
                   alt="CS Student Profile" 
                   className="w-full h-full object-cover object-center"
                 />
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center p-8 bg-black/50 backdrop-blur-sm rounded-lg w-full md:w-auto">
-                    <h3 className="text-2xl font-bold mb-4 text-white font-agency">Computer Science Student</h3>
-                    <div className="flex justify-center gap-4">
-                      <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-white transition-colors">
-                        <Github size={24} />
-                      </a>
-                      <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-white transition-colors">
-                        <Linkedin size={24} />
-                      </a>
-                    </div>
-                  </div>
-                </div>
               </div>
               
               {/* Decorative elements */}
               <div className="absolute -top-4 -left-4 w-24 h-24 border border-white/20 rounded-lg"></div>
               <div className="absolute -bottom-4 -right-4 w-24 h-24 border border-white/20 rounded-lg"></div>
+              
+              {/* Social links overlay */}
+              <div className="absolute bottom-4 left-4 right-4 p-4 bg-black/50 backdrop-blur-sm rounded-lg">
+                <div className="flex justify-center gap-4">
+                  <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-white transition-colors">
+                    <Github size={24} />
+                  </a>
+                  <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-white transition-colors">
+                    <Linkedin size={24} />
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
