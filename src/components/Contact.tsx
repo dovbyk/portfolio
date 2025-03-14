@@ -76,7 +76,7 @@ const Contact: React.FC = () => {
                   <div>
                     <h4 className="text-white/80 text-sm mb-1">Email</h4>
                     <a href="mailto:contact@example.com" className="text-white hover:text-blue-400 transition-colors">
-                      contact@example.com
+                      aaryan711820@gmail.com
                     </a>
                   </div>
                 </div>
@@ -88,7 +88,7 @@ const Contact: React.FC = () => {
                   <div>
                     <h4 className="text-white/80 text-sm mb-1">Phone</h4>
                     <a href="tel:+12345678901" className="text-white hover:text-blue-400 transition-colors">
-                      +1 (234) 567-8901
+                      +91 6372542699
                     </a>
                   </div>
                 </div>
@@ -99,7 +99,7 @@ const Contact: React.FC = () => {
                   </div>
                   <div>
                     <h4 className="text-white/80 text-sm mb-1">Location</h4>
-                    <p className="text-white">San Francisco, CA</p>
+                    <p className="text-white">KIIT University, Bhubaneswar</p>
                   </div>
                 </div>
               </div>
@@ -108,7 +108,7 @@ const Contact: React.FC = () => {
                 <h4 className="text-lg font-medium mb-4">Connect with me</h4>
                 <div className="flex gap-4">
                   <a 
-                    href="https://github.com/example" 
+                    href="https://github.com/dovbyk" 
                     target="_blank" 
                     rel="noopener noreferrer" 
                     className="p-3 rounded-full bg-white/5 text-white hover:bg-white/10 transition-all duration-300"
@@ -117,7 +117,7 @@ const Contact: React.FC = () => {
                     <Github size={20} />
                   </a>
                   <a 
-                    href="https://linkedin.com/in/example" 
+                    href="https://www.linkedin.com/in/aryan-sharma-gaire-12250b309/" 
                     target="_blank" 
                     rel="noopener noreferrer" 
                     className="p-3 rounded-full bg-white/5 text-white hover:bg-white/10 transition-all duration-300"
