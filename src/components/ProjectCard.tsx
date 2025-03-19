@@ -20,13 +20,13 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   codeLink,
   index,
 }) => {
-  // ✅ Function to handle opening the Live Demo in a new tab
-  const handleOpenDemo = (url: string) => {
-    if (url) {
-      const newTab = window.open(url, "_blank", "noopener,noreferrer");
-      if (!newTab) {
-        alert("Popup blocked! Please allow pop-ups for this site.");
-      }
+  // ✅ Function to open the correct Live Demo link in a new tab
+  const handleOpenDemo = () => {
+    const demoURL = "https://dovbyk.github.io/pacman.js"; // 🔗 Set the correct URL here
+    const newTab = window.open(demoURL, "_blank", "noopener,noreferrer");
+    
+    if (!newTab) {
+      alert("Popup blocked! Please allow pop-ups for this site.");
     }
   };
 
@@ -64,15 +64,13 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 
         {/* Buttons for Links */}
         <div className="flex items-center gap-4 mt-4">
-          {demoLink && (
-            <button
-              onClick={() => handleOpenDemo(demoLink)}
-              className="px-4 py-2 bg-black-800 hover:bg-gray-700 text-white rounded-md flex items-center gap-2 transition"
-            >
-              <ExternalLink size={16} />
-              <span>Live Demo</span>
-            </button>
-          )}
+          <button
+            onClick={handleOpenDemo} // 🔥 Calls the function to open the correct link
+            className="px-4 py-2 bg-black-800 hover:bg-gray-700 text-white rounded-md flex items-center gap-2 transition"
+          >
+            <ExternalLink size={16} />
+            <span>Live Demo</span>
+          </button>
 
           {codeLink && (
             <a 
