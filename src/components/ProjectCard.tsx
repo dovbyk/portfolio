@@ -58,16 +58,15 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 
         {/* Buttons for Links */}
         <div className="flex items-center gap-4 mt-4">
-           {demoLink && (
-            <a 
-              href={demoLink} 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="px-4 py-2 bg-black-800 hover:bg-gray-700 text-white rounded-md flex items-center gap-2 transition"
-            >
-              <span>Live Demo</span>
-            </a>
-          )}
+            {demoLink && (
+                <button
+                    onClick={() => window.open(demoLink, "_blank", "noopener,noreferrer")}
+                    className="px-4 py-2 bg-black-800 hover:bg-gray-700 text-white rounded-md flex items-center gap-2 transition"
+                >
+                    <span>Live Demo</span>
+                </button>
+            )}
+
 
 
           
