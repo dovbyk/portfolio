@@ -74,7 +74,7 @@ const Projects: React.FC = () => {
         
         <div className="text-center mt-16" style={{ opacity: 0, animation: 'fade-in 0.8s ease-out 1s forwards' }}>
           <a 
-            href="https://github.com/example" 
+            href="https://github.com/dovbyk" 
             target="_blank" 
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10 transition-all duration-300"
