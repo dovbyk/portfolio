@@ -10,7 +10,7 @@ const Projects: React.FC = () => {
       description: "A Transformer model which takes handwriting sample from user and converts any digital text into a realistic handwriting ",
       image: 'https://images.unsplash.com/photo-1684369175833-4b445ad6bfb5?q=80&w=1996&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       tags: ["Python", "Machine Learning", "React"],
-      codeLink: "https://github.com/example",
+      codeLink: "https://github.com/DeepScript",
     },
     {
       title: "KIIT-Compatibility",
@@ -24,7 +24,7 @@ const Projects: React.FC = () => {
       description: "A customized version of the traditional PacMan game",
       image: 'https://png.pngtree.com/background/20230716/original/pngtree-realistic-discord-icon-logo-in-3d-rendering-picture-image_4237831.jpg',
       tags: ["Java", "Swing"],
-      demoLink: "/demo.mp4",
+      demoLink: "dovbyk.github.io/pacman.js",
       codeLink: "https://github.com/dovbyk/PacMan",
     },
   ];
