@@ -25,9 +25,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
     const demoURL = "https://dovbyk.github.io/pacman.js"; //  Set the correct URL here
     const newTab = window.open(demoURL, "_blank", "noopener,noreferrer");
     
-    if (!newTab) {
-      alert("Popup blocked! Please allow pop-ups for this site.");
-    }
+  
   };
 
   return (
