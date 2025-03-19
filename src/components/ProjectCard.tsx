@@ -62,6 +62,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 
         {/* Buttons for Links */}
         <div className="flex items-center gap-4 mt-4">
+          {title === "SaveThePac" && (
           <button
             onClick={handleOpenDemo} //  Calls the function to open the correct link
             className="px-4 py-2 bg-black-800 hover:bg-gray-700 text-white rounded-md flex items-center gap-2 transition"
@@ -69,7 +70,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             <ExternalLink size={16} />
             <span>Live Demo</span>
           </button>
-
+         )}
           {codeLink && (
             <a 
               href={codeLink} 
