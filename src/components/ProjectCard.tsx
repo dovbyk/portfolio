@@ -68,7 +68,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             className="px-4 py-2 bg-black-800 hover:bg-gray-700 text-white rounded-md flex items-center gap-2 transition"
           >
             <ExternalLink size={16} />
-            <span>Live Demo</span>
+            <span>Click to Play</span>
           </button>
          )}
           {codeLink && (
