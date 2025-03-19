@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
-import { ExternalLink, Github, X } from 'lucide-react';
+import React from 'react';
+import { ExternalLink, Github } from 'lucide-react';
 
 interface ProjectCardProps {
   title: string;
   description: string;
   image: string;
   tags: string[];
-  demoLink?: string; // Video link
-  codeLink?: string;
+  demoLink?: string; // Live demo link
+  codeLink?: string; // GitHub repository link
   index: number;
 }
 
@@ -20,9 +20,15 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   codeLink,
   index,
 }) => {
-  // State for video modal
-  const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
-  const [currentVideo, setCurrentVideo] = useState<string | null>(null);
+  // ✅ Function to handle opening the Live Demo in a new tab
+  const handleOpenDemo = (url: string) => {
+    if (url) {
+      const newTab = window.open(url, "_blank", "noopener,noreferrer");
+      if (!newTab) {
+        alert("Popup blocked! Please allow pop-ups for this site.");
+      }
+    }
+  };
 
   return (
     <div 
@@ -58,18 +64,16 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 
         {/* Buttons for Links */}
         <div className="flex items-center gap-4 mt-4">
-            {demoLink && (
-                <button
-                    onClick={() => window.open(demoLink, "_blank", "noopener,noreferrer")}
-                    className="px-4 py-2 bg-black-800 hover:bg-gray-700 text-white rounded-md flex items-center gap-2 transition"
-                >
-                    <span>Live Demo</span>
-                </button>
-            )}
+          {demoLink && (
+            <button
+              onClick={() => handleOpenDemo(demoLink)}
+              className="px-4 py-2 bg-black-800 hover:bg-gray-700 text-white rounded-md flex items-center gap-2 transition"
+            >
+              <ExternalLink size={16} />
+              <span>Live Demo</span>
+            </button>
+          )}
 
-
-
-          
           {codeLink && (
             <a 
               href={codeLink} 
@@ -83,27 +87,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           )}
         </div>
       </div>
-
-      {isVideoModalOpen && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-75 p-4">
-            <div className="relative w-full max-w-4xl bg-gray-900 rounded-lg">
-              <button
-                onClick={() => setIsVideoModalOpen(false)}
-                className="absolute -top-10 right-0 text-gray-400 hover:text-white p-2 rounded-full bg-gray-800 hover:bg-gray-700 transition-colors"
-              >
-                <X size={24} />
-              </button>
-              <video
-                src={currentVideo}
-                controls
-                className="w-full rounded-lg"
-                autoPlay
-              >
-                Your browser does not support the video tag.
-              </video>
-            </div>
-          </div>
-        )}
     </div>
   );
 };
