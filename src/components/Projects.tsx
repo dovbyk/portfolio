@@ -21,7 +21,7 @@ const Projects: React.FC = () => {
     },
     {
       title: "SaveThePac",
-      description: "A customized version of the traditional PacMan game",
+      description: "A customized version of the traditional PacMan game. Skip past all the obstacles that come along the way and collect as many points.",
       image: 'https://png.pngtree.com/background/20230716/original/pngtree-realistic-discord-icon-logo-in-3d-rendering-picture-image_4237831.jpg',
       tags: ["Java", "Swing"],
       demoLink: "dovbyk.github.io/pacman.js",
