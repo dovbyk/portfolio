@@ -18,14 +18,14 @@ const Hero: React.FC = () => {
         </div>
         
         <AnimatedText
-          text="Cooking some random stuffs"
+          text="Cooking some random stuff"
           el="h1"
           className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-gradient leading-tight max-w-4xl mx-auto font-agency"
           animation="blur-in"
         />
         
         <AnimatedText
-          text="Programming is like building with LEGO, a single misplaced piece can bring down the entire structure."
+          text="Programming is like building with LEGO, a single misplaced piece is enough to bring down the entire structure."
           el="p"
           className="text-xl md:text-2xl text-white/80 max-w-2xl mx-auto mb-12"
           animation="slide-up"
