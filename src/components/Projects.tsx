@@ -10,7 +10,7 @@ const Projects: React.FC = () => {
       description: "A Transformer model which takes handwriting sample from user and converts any digital text into a realistic handwriting ",
       image: 'https://images.unsplash.com/photo-1684369175833-4b445ad6bfb5?q=80&w=1996&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       tags: ["Python", "Machine Learning", "React"],
-      codeLink: "https://github.com/DeepScript",
+      codeLink: "https://github.com/dovbyk/DeepScript",
     },
     {
       title: "KIIT-Compatibility",
