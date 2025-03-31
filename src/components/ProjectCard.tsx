@@ -21,11 +21,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   index,
 }) => {
   // Function to open the correct Live Demo link in a new tab
-  const handleOpenDemo = () => {
-    const demoURL = "https://dovbyk.github.io/pacman.js"; //  Set the correct URL here
-    const newTab = window.open(demoURL, "_blank", "noopener,noreferrer");
-    
-  
+  const handleOpenDemo = (url: string) => {
+    window.open(url, "_blank", "noopener,noreferrer");
   };
 
   return (
@@ -62,15 +59,24 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 
         {/* Buttons for Links */}
         <div className="flex items-center gap-4 mt-4">
-          {title === "SaveThePac" && (
-          <button
-            onClick={handleOpenDemo} //  Calls the function to open the correct link
-            className="px-4 py-2 bg-black-800 hover:bg-gray-700 text-white rounded-md flex items-center gap-2 transition"
-          >
-            <ExternalLink size={16} />
-            <span>Click to Play</span>
-          </button>
-         )}
+          {title === "SaveThePac" && demoLink && (
+            <button
+              onClick={() => handleOpenDemo(demoLink)}
+              className="px-4 py-2 bg-black-800 hover:bg-gray-700 text-white rounded-md flex items-center gap-2 transition"
+            >
+              <ExternalLink size={16} />
+              <span>Click to Play</span>
+            </button>
+          )}
+          {title === "DeepScript" && demoLink && (
+            <button
+              onClick={() => handleOpenDemo(demoLink)}
+              className="px-4 py-2 bg-black-800 hover:bg-gray-700 text-white rounded-md flex items-center gap-2 transition"
+            >
+              <ExternalLink size={16} />
+              <span>Try it</span>
+            </button>
+          )}
           {codeLink && (
             <a 
               href={codeLink} 
