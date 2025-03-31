@@ -22,8 +22,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 }) => {
   // Function to open the correct Live Demo link in a new tab
   const handleOpenDemo = (url: string) => {
-    window.open(url, "_blank", "noopener,noreferrer");
-  };
+   const formattedURL = url.startsWith("http") ? url : `https://${url}`;
+    window.open(formattedURL, "_blank", "noopener,noreferrer");  };
 
   return (
     <div 
