@@ -18,6 +18,33 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ children }) => {
     return () => clearTimeout(timer);
   }, []);
 
+  // Logo animation variants
+  const logoVariants = {
+    hidden: { 
+      pathLength: 0,
+      opacity: 0 
+    },
+    visible: {
+      pathLength: 1,
+      opacity: 1,
+      transition: { 
+        duration: 1,
+        ease: "easeInOut",
+      }
+    }
+  };
+
+  // Container animation variants
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+      }
+    }
+  };
+
   return (
     <>
       {isLoading && (
@@ -31,12 +58,45 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ children }) => {
           }}
         >
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
-            className="text-4xl font-bold text-foreground"
+            className="w-32 h-32"
           >
-            Aryan Sharma
+            <motion.svg
+              width="100%"
+              height="100%"
+              viewBox="0 0 100 100"
+              initial="hidden"
+              animate="visible"
+              variants={containerVariants}
+            >
+              {/* Animated logo elements */}
+              <motion.circle
+                cx="50"
+                cy="50"
+                r="40"
+                stroke="white"
+                strokeWidth="2"
+                fill="none"
+                variants={logoVariants}
+              />
+              <motion.path
+                d="M30 40 L50 65 L70 40"
+                stroke="white"
+                strokeWidth="2"
+                fill="none"
+                variants={logoVariants}
+              />
+              <motion.path
+                d="M30 60 L50 35 L70 60"
+                stroke="white"
+                strokeWidth="2"
+                fill="none"
+                variants={logoVariants}
+                transition={{ delay: 0.3, duration: 1 }}
+              />
+            </motion.svg>
           </motion.div>
         </motion.div>
       )}
