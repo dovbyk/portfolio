@@ -25,7 +25,7 @@ const Hero: React.FC = () => {
         />
         
         <AnimatedText
-          text="Programming is like building with LEGO, a single misplaced piece is enough to bring down the entire structure."
+          text="Programming is like building with LEGO, a single misplaced piece is enough to take down the entire structure."
           el="p"
           className="text-xl md:text-2xl text-white/80 max-w-2xl mx-auto mb-12"
           animation="slide-up"
