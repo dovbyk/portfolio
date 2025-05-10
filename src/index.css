@@ -83,7 +83,7 @@
     z-index: -1;
     width: 100vw;
     height: 100vh;
-    background-image: url('/patterns/circuit-dark.svg'); /* Replace with your actual path */
+    background-image: url('/circuit-dark.svg'); /* Replace with your actual path */
     background-size: 200px 200px;
     background-repeat: repeat;
     opacity: 0.1;
