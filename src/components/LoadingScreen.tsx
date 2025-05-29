@@ -38,7 +38,7 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ children }) => {
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
-      opacity: 0,
+      opacity: 1,
       transition: {
         staggerChildren: 0.2,
       }
