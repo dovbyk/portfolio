@@ -18,7 +18,7 @@ const Hero: React.FC = () => {
         </div>
         
         <AnimatedText
-          text="Just wanna cook somethin'"
+          text="Just keep cookin'"
           el="h1"
           className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-gradient leading-tight max-w-4xl mx-auto font-agency"
           animation="blur-in"
