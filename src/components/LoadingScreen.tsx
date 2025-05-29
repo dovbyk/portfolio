@@ -102,7 +102,7 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ children }) => {
       )}
       <motion.div
         initial={{ opacity: 0 }}
-        animate={{ opacity: isLoading ? 0 : 1 }}
+        animate={{ opacity: isLoading ? 0 : 0 }}
         transition={{ duration: 0.5, ease: "easeInOut" }}
       >
         {children}
