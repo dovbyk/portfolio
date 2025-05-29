@@ -47,7 +47,7 @@
   }
 
   body {
-     @apply bg-background text-foreground font-montserrat selection:bg-white/10 selection:text-white antialiased;
+     @apply text-foreground font-montserrat selection:bg-white/10 selection:text-white antialiased;
 
     background-color: black;
     background-image: url('/circuit-dark.svg');  
