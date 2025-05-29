@@ -49,7 +49,7 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ children }) => {
     <>
       {isLoading && (
         <motion.div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black"
+          className="fixed inset-0 z-50 flex items-center justify-center "
           initial={{ opacity: 1 }}
           animate={{ opacity: 0 }}
           transition={{ duration: 0.8, ease: "easeInOut", delay: 1 }}
@@ -104,7 +104,6 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ children }) => {
         initial={{ opacity: 0 }}
         animate={{ opacity: isLoading ? 0 : 1 }}
         transition={{ duration: 0.5, ease: "easeInOut" }}
-        className="min-h-screen"
       >
         {children}
       </motion.div>
