@@ -1,1 +1,1 @@
-## 🚀Created portfolio website with Lovable.dev within an hour
+## 🚀Created portfolio website on Lovable.dev within an hour
