@@ -14,11 +14,11 @@ const Projects: React.FC = () => {
       codeLink: "https://github.com/dovbyk/DeepScript",
     },
     {
-      title: "KIIT-Compatibility",
-      description: "A networking platform for KIIT students based on the compatibility scores with fellow students",
+      title: "PromptToAnimation",
+      description: "Visualize and learn any mathematical equations or machine learning algorithms with beautiful animations and voiceovers just by a single prompt",
       image: 'https://e7.pngegg.com/pngimages/9/267/png-clipart-senior-management-business-project-management-project-manager-team-members-text-service.png',
-      tags: ["React.js", "Node.js", "MongoDB"],
-      codeLink: "https://github.com/dovbyk/KIIT-Compatibility",
+      tags: ["Python", "Manim", "Gemini API"],
+      codeLink: "https://github.com/dovbyk/manim-video-generator",
     },
     {
       title: "SaveThePac",
