@@ -50,48 +50,54 @@
     @apply bg-background text-foreground font-montserrat selection:bg-white/10 selection:text-white antialiased;
     background-color: black;
     position: relative;
+    overflow-x: hidden;
   }
 
+  /* Watermark layers */
   body::before {
-    content: 'DEVELOPER • INNOVATOR • CREATOR • FULL STACK • MACHINE LEARNING • DEVELOPER • INNOVATOR • CREATOR • FULL STACK • MACHINE LEARNING • DEVELOPER • INNOVATOR • CREATOR • FULL STACK • MACHINE LEARNING • DEVELOPER • INNOVATOR • CREATOR • FULL STACK • MACHINE LEARNING • DEVELOPER • INNOVATOR • CREATOR • FULL STACK • MACHINE LEARNING • DEVELOPER • INNOVATOR • CREATOR • FULL STACK • MACHINE LEARNING • DEVELOPER • INNOVATOR • CREATOR • FULL STACK • MACHINE LEARNING • DEVELOPER • INNOVATOR • CREATOR • FULL STACK • MACHINE LEARNING';
+    content: 'DEVELOPER • INNOVATOR • CREATOR • FULL STACK • WEB DESIGN • DEVELOPER • INNOVATOR • CREATOR • FULL STACK • WEB DESIGN • DEVELOPER • INNOVATOR • CREATOR • FULL STACK • WEB DESIGN • DEVELOPER • INNOVATOR • CREATOR • FULL STACK • WEB DESIGN • DEVELOPER • INNOVATOR • CREATOR • FULL STACK • WEB DESIGN • DEVELOPER • INNOVATOR • CREATOR • FULL STACK • WEB DESIGN • DEVELOPER • INNOVATOR • CREATOR • FULL STACK • WEB DESIGN • DEVELOPER • INNOVATOR • CREATOR • FULL STACK • WEB DESIGN • DEVELOPER • INNOVATOR • CREATOR • FULL STACK • WEB DESIGN • DEVELOPER • INNOVATOR • CREATOR • FULL STACK • WEB DESIGN';
     position: fixed;
     top: 0;
-    left: 0;
-    right: 0;
+    left: -50%;
+    right: -50%;
     bottom: 0;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 300;
-    color: rgba(255, 255, 255, 0.05);
-    letter-spacing: 2px;
-    line-height: 100px;
+    color: rgba(255, 255, 255, 0.08);
+    letter-spacing: 4px;
+    line-height: 80px;
     white-space: nowrap;
-    overflow: hidden;
     transform: rotate(-45deg);
     transform-origin: center;
     pointer-events: none;
     z-index: 1;
-    animation: watermark-scroll 40s linear infinite;
+    animation: watermark-move 30s linear infinite;
+    opacity: 0;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
   }
 
   body::after {
-    content: 'CODE • BUILD • DEPLOY • INNOVATE • CODE • BUILD • DEPLOY • INNOVATE • CODE • BUILD • DEPLOY • INNOVATE • CODE • BUILD • DEPLOY • INNOVATE • CODE • BUILD • DEPLOY • INNOVATE • CODE • BUILD • DEPLOY • INNOVATE • CODE • BUILD • DEPLOY • INNOVATE • CODE • BUILD • DEPLOY • INNOVATE • CODE • BUILD • DEPLOY • INNOVATE • CODE • BUILD • DEPLOY • INNOVATE • CODE • BUILD • DEPLOY • INNOVATE • CODE • BUILD • DEPLOY • INNOVATE';
+    content: 'CODE • BUILD • DEPLOY • DESIGN • INNOVATE • CODE • BUILD • DEPLOY • DESIGN • INNOVATE • CODE • BUILD • DEPLOY • DESIGN • INNOVATE • CODE • BUILD • DEPLOY • DESIGN • INNOVATE • CODE • BUILD • DEPLOY • DESIGN • INNOVATE • CODE • BUILD • DEPLOY • DESIGN • INNOVATE • CODE • BUILD • DEPLOY • DESIGN • INNOVATE • CODE • BUILD • DEPLOY • DESIGN • INNOVATE • CODE • BUILD • DEPLOY • DESIGN • INNOVATE • CODE • BUILD • DEPLOY • DESIGN • INNOVATE';
     position: fixed;
     top: 0;
-    left: 0;
-    right: 0;
+    left: -50%;
+    right: -50%;
     bottom: 0;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 200;
-    color: rgba(255, 255, 255, 0.03);
-    letter-spacing: 3px;
+    color: rgba(255, 255, 255, 0.05);
+    letter-spacing: 6px;
     line-height: 120px;
     white-space: nowrap;
-    overflow: hidden;
     transform: rotate(45deg);
     transform-origin: center;
     pointer-events: none;
     z-index: 1;
-    animation: watermark-scroll-reverse 50s linear infinite;
+    animation: watermark-move-reverse 40s linear infinite;
+    opacity: 0;
+    animation-delay: 2.5s;
+    animation-fill-mode: forwards;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -148,7 +154,42 @@
   scrollbar-color: rgba(255, 255, 255, 0.2) rgba(0, 0, 0, 1);
 }
 
-/* Animation keyframes */
+/* Watermark animations */
+@keyframes watermark-move {
+  0% {
+    transform: rotate(-45deg) translateX(-100%);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(-45deg) translateX(100%);
+    opacity: 1;
+  }
+}
+
+@keyframes watermark-move-reverse {
+  0% {
+    transform: rotate(45deg) translateX(100%);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(45deg) translateX(-100%);
+    opacity: 1;
+  }
+}
+
+/* Other animations */
 @keyframes fade-in {
   from {
     opacity: 0;
@@ -169,23 +210,5 @@
   }
   100% {
     transform: translateY(0);
-  }
-}
-
-@keyframes watermark-scroll {
-  0% {
-    transform: rotate(-45deg) translateX(-100%);
-  }
-  100% {
-    transform: rotate(-45deg) translateX(100%);
-  }
-}
-
-@keyframes watermark-scroll-reverse {
-  0% {
-    transform: rotate(45deg) translateX(100%);
-  }
-  100% {
-    transform: rotate(45deg) translateX(-100%);
   }
 }
