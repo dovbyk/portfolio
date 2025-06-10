@@ -53,51 +53,73 @@
     overflow-x: hidden;
   }
 
-  /* Watermark layers */
+  /* Tech Circuit Pattern Watermark */
   body::before {
-    content: 'DEVELOPER • INNOVATOR • CREATOR • FULL STACK • WEB DESIGN • DEVELOPER • INNOVATOR • CREATOR • FULL STACK • WEB DESIGN • DEVELOPER • INNOVATOR • CREATOR • FULL STACK • WEB DESIGN • DEVELOPER • INNOVATOR • CREATOR • FULL STACK • WEB DESIGN • DEVELOPER • INNOVATOR • CREATOR • FULL STACK • WEB DESIGN • DEVELOPER • INNOVATOR • CREATOR • FULL STACK • WEB DESIGN • DEVELOPER • INNOVATOR • CREATOR • FULL STACK • WEB DESIGN • DEVELOPER • INNOVATOR • CREATOR • FULL STACK • WEB DESIGN • DEVELOPER • INNOVATOR • CREATOR • FULL STACK • WEB DESIGN • DEVELOPER • INNOVATOR • CREATOR • FULL STACK • WEB DESIGN';
+    content: '';
     position: fixed;
     top: 0;
-    left: -50%;
-    right: -50%;
+    left: 0;
+    right: 0;
     bottom: 0;
-    font-size: 18px;
-    font-weight: 300;
-    color: rgba(255, 255, 255, 0.08);
-    letter-spacing: 4px;
-    line-height: 80px;
-    white-space: nowrap;
-    transform: rotate(-45deg);
-    transform-origin: center;
+    background-image: 
+      /* Circuit lines */
+      linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px),
+      linear-gradient(0deg, rgba(255,255,255,0.03) 1px, transparent 1px),
+      /* Diagonal tech lines */
+      linear-gradient(45deg, transparent 24px, rgba(0,255,255,0.02) 25px, rgba(0,255,255,0.02) 26px, transparent 27px, transparent 74px, rgba(0,255,255,0.02) 75px, rgba(0,255,255,0.02) 76px, transparent 77px),
+      /* Dots pattern */
+      radial-gradient(circle at 25% 25%, rgba(255,255,255,0.04) 2px, transparent 2px),
+      radial-gradient(circle at 75% 75%, rgba(0,255,255,0.03) 1px, transparent 1px);
+    background-size: 
+      50px 50px,
+      50px 50px,
+      100px 100px,
+      80px 80px,
+      60px 60px;
+    background-position: 
+      0 0,
+      0 0,
+      0 0,
+      0 0,
+      30px 30px;
     pointer-events: none;
     z-index: 1;
-    animation: watermark-move 30s linear infinite;
     opacity: 0;
-    animation-delay: 2s;
-    animation-fill-mode: forwards;
+    animation: tech-watermark-fade-in 2s ease-out 2s forwards;
   }
 
+  /* Animated Tech Nodes */
   body::after {
-    content: 'CODE • BUILD • DEPLOY • DESIGN • INNOVATE • CODE • BUILD • DEPLOY • DESIGN • INNOVATE • CODE • BUILD • DEPLOY • DESIGN • INNOVATE • CODE • BUILD • DEPLOY • DESIGN • INNOVATE • CODE • BUILD • DEPLOY • DESIGN • INNOVATE • CODE • BUILD • DEPLOY • DESIGN • INNOVATE • CODE • BUILD • DEPLOY • DESIGN • INNOVATE • CODE • BUILD • DEPLOY • DESIGN • INNOVATE • CODE • BUILD • DEPLOY • DESIGN • INNOVATE • CODE • BUILD • DEPLOY • DESIGN • INNOVATE';
+    content: '';
     position: fixed;
     top: 0;
-    left: -50%;
-    right: -50%;
+    left: 0;
+    right: 0;
     bottom: 0;
-    font-size: 16px;
-    font-weight: 200;
-    color: rgba(255, 255, 255, 0.05);
-    letter-spacing: 6px;
-    line-height: 120px;
-    white-space: nowrap;
-    transform: rotate(45deg);
-    transform-origin: center;
+    background-image: 
+      /* Large tech nodes */
+      radial-gradient(circle at 20% 30%, rgba(0,255,255,0.05) 3px, transparent 4px),
+      radial-gradient(circle at 80% 20%, rgba(255,0,255,0.04) 2px, transparent 3px),
+      radial-gradient(circle at 30% 80%, rgba(0,255,0,0.03) 2px, transparent 3px),
+      radial-gradient(circle at 70% 70%, rgba(255,255,0,0.04) 1px, transparent 2px),
+      radial-gradient(circle at 10% 60%, rgba(255,0,0,0.03) 1px, transparent 2px),
+      radial-gradient(circle at 90% 40%, rgba(0,255,255,0.04) 2px, transparent 3px),
+      /* Connection lines */
+      linear-gradient(125deg, transparent 48%, rgba(0,255,255,0.02) 49%, rgba(0,255,255,0.02) 51%, transparent 52%),
+      linear-gradient(55deg, transparent 48%, rgba(255,0,255,0.02) 49%, rgba(255,0,255,0.02) 51%, transparent 52%);
+    background-size: 
+      200px 200px,
+      180px 180px,
+      160px 160px,
+      120px 120px,
+      100px 100px,
+      140px 140px,
+      300px 300px,
+      250px 250px;
     pointer-events: none;
     z-index: 1;
-    animation: watermark-move-reverse 40s linear infinite;
     opacity: 0;
-    animation-delay: 2.5s;
-    animation-fill-mode: forwards;
+    animation: tech-nodes-animate 3s ease-out 2.5s forwards, tech-pulse 6s ease-in-out 5s infinite;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -154,38 +176,37 @@
   scrollbar-color: rgba(255, 255, 255, 0.2) rgba(0, 0, 0, 1);
 }
 
-/* Watermark animations */
-@keyframes watermark-move {
+/* Tech Watermark Animations */
+@keyframes tech-watermark-fade-in {
   0% {
-    transform: rotate(-45deg) translateX(-100%);
     opacity: 0;
-  }
-  10% {
-    opacity: 1;
-  }
-  90% {
-    opacity: 1;
+    transform: scale(0.9);
   }
   100% {
-    transform: rotate(-45deg) translateX(100%);
     opacity: 1;
+    transform: scale(1);
   }
 }
 
-@keyframes watermark-move-reverse {
+@keyframes tech-nodes-animate {
   0% {
-    transform: rotate(45deg) translateX(100%);
     opacity: 0;
-  }
-  10% {
-    opacity: 1;
-  }
-  90% {
-    opacity: 1;
+    transform: rotate(0deg) scale(0.8);
   }
   100% {
-    transform: rotate(45deg) translateX(-100%);
     opacity: 1;
+    transform: rotate(0deg) scale(1);
+  }
+}
+
+@keyframes tech-pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.8;
   }
 }
 
