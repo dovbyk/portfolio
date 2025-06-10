@@ -59,9 +59,10 @@ body::before {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200"><path d="M50,0 C70,30 70,70 50,100 C30,130 30,170 50,200" stroke="rgba(255,255,255,0.08)" stroke-width="0.8" fill="none" stroke-linecap="round"/><path d="M150,0 C130,30 130,70 150,100 C170,130 170,170 150,200" stroke="rgba(255,255,255,0.08)" stroke-width="0.8" fill="none" stroke-linecap="round"/><path d="M50,40 L150,40 M50,80 L150,80 M50,120 L150,120 M50,160 L150,160" stroke="rgba(255,255,255,0.05)" stroke-width="0.4" fill="none"/></svg>');  opacity: 0;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200"><path d="M50,0 C70,30 70,70 50,100 C30,130 30,170 50,200" stroke="rgba(255,255,255,0.08)" stroke-width="0.8" fill="none" stroke-linecap="round"/><path d="M150,0 C130,30 130,70 150,100 C170,130 170,170 150,200" stroke="rgba(255,255,255,0.08)" stroke-width="0.8" fill="none" stroke-linecap="round"/><path d="M50,40 L150,40 M50,80 L150,80 M50,120 L150,120 M50,160 L150,160" stroke="rgba(255,255,255,0.05)" stroke-width="0.4" fill="none"/></svg>'); 
   pointer-events: none;
   z-index: 1;
+  opacity: 0;
   animation: circuit-fade-in 1.5s ease-out 2s forwards;
 }
 
@@ -73,9 +74,10 @@ body::after {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="240" height="240" viewBox="0 0 240 240"><path d="M60,0 C84,36 84,84 60,120 C36,156 36,204 60,240" stroke="rgba(255,255,255,0.06)" stroke-width="0.7" fill="none" stroke-linecap="round"/><path d="M180,0 C156,36 156,84 180,120 C204,156 204,204 180,240" stroke="rgba(255,255,255,0.06)" stroke-width="0.7" fill="none" stroke-linecap="round"/><path d="M60,48 L180,48 M60,96 L180,96 M60,144 L180,144 M60,192 L180,192" stroke="rgba(255,255,255,0.04)" stroke-width="0.3" fill="none"/></svg>');  opacity: 0;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="240" height="240" viewBox="0 0 240 240"><path d="M60,0 C84,36 84,84 60,120 C36,156 36,204 60,240" stroke="rgba(255,255,255,0.06)" stroke-width="0.7" fill="none" stroke-linecap="round"/><path d="M180,0 C156,36 156,84 180,120 C204,156 204,204 180,240" stroke="rgba(255,255,255,0.06)" stroke-width="0.7" fill="none" stroke-linecap="round"/><path d="M60,48 L180,48 M60,96 L180,96 M60,144 L180,144 M60,192 L180,192" stroke="rgba(255,255,255,0.04)" stroke-width="0.3" fill="none"/></svg>'); 
   pointer-events: none;
   z-index: 1;
+  opacity: 0;
   animation: circuit-fade-in 2s ease-out 2.5s forwards;
 }
 
