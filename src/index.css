@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
@@ -52,6 +53,7 @@
     overflow-x: hidden;
   }
 
+/* Solar System Background */
 body::before {
   content: '';
   position: fixed;
@@ -59,14 +61,28 @@ body::before {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 300 300"><path d="M75,0 C95,30 95,70 75,100 C55,130 55,170 75,200" stroke="rgba(255,255,255,0.15)" stroke-width="0.8" fill="none" stroke-linecap="round"/><path d="M225,0 C205,30 205,70 225,100 C245,130 245,170 225,200" stroke="rgba(255,255,255,0.15)" stroke-width="0.8" fill="none" stroke-linecap="round"/><path d="M75,40 L225,40 M75,80 L225,80 M75,120 L225,120 M75,160 L225,160" stroke="rgba(255,255,255,0.08)" stroke-width="0.4" fill="none"/><path d="M25,0 C45,30 45,70 25,100 C5,130 5,170 25,200" stroke="rgba(255,255,255,0.15)" stroke-width="0.8" fill="none" stroke-linecap="round"/><path d="M175,0 C155,30 155,70 175,100 C195,130 195,170 175,200" stroke="rgba(255,255,255,0.15)" stroke-width="0.8" fill="none" stroke-linecap="round"/><path d="M25,40 L175,40 M25,80 L175,80 M25,120 L175,120 M25,160 L175,160" stroke="rgba(255,255,255,0.08)" stroke-width="0.4" fill="none"/></svg>');
+  background-image: 
+    /* Stars */
+    radial-gradient(2px 2px at 20px 30px, rgba(255,255,255,0.8), transparent),
+    radial-gradient(2px 2px at 40px 70px, rgba(255,255,255,0.6), transparent),
+    radial-gradient(1px 1px at 90px 40px, rgba(255,255,255,0.9), transparent),
+    radial-gradient(1px 1px at 130px 80px, rgba(255,255,255,0.7), transparent),
+    radial-gradient(2px 2px at 160px 30px, rgba(255,255,255,0.8), transparent),
+    /* Central Sun */
+    radial-gradient(circle at 50% 50%, rgba(255,215,0,0.3) 0%, rgba(255,140,0,0.2) 20%, transparent 40%),
+    /* Orbital rings */
+    radial-gradient(circle at 50% 50%, transparent 200px, rgba(255,255,255,0.1) 201px, rgba(255,255,255,0.1) 203px, transparent 204px),
+    radial-gradient(circle at 50% 50%, transparent 300px, rgba(255,255,255,0.08) 301px, rgba(255,255,255,0.08) 302px, transparent 303px),
+    radial-gradient(circle at 50% 50%, transparent 400px, rgba(255,255,255,0.06) 401px, rgba(255,255,255,0.06) 402px, transparent 403px);
+  background-repeat: repeat;
+  background-size: 200px 100px, 200px 100px, 200px 100px, 200px 100px, 200px 100px, 800px 800px, 800px 800px, 800px 800px, 800px 800px;
   pointer-events: none;
   z-index: 1;
   opacity: 0;
-  animation: circuit-fade-in 1.5s ease-out 2s forwards;
+  animation: solar-system-fade-in 2s ease-out 1.5s forwards;
 }
 
-
+/* Planets layer */
 body::after {
   content: '';
   position: fixed;
@@ -74,13 +90,26 @@ body::after {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="360" height="360" viewBox="0 0 360 360"><path d="M90,0 C110,36 110,84 90,120 C70,156 70,204 90,240" stroke="rgba(255,255,255,0.1)" stroke-width="0.8" fill="none" stroke-linecap="round"/><path d="M270,0 C250,36 250,84 270,120 C290,156 290,204 270,240" stroke="rgba(255,255,255,0.1)" stroke-width="0.8" fill="none" stroke-linecap="round"/><path d="M90,48 L270,48 M90,96 L270,96 M90,144 L270,144 M90,192 L270,192" stroke="rgba(255,255,255,0.06)" stroke-width="0.4" fill="none"/><path d="M30,0 C50,36 50,84 30,120 C10,156 10,204 30,240" stroke="rgba(255,255,255,0.1)" stroke-width="0.8" fill="none" stroke-linecap="round"/><path d="M210,0 C190,36 190,84 210,120 C230,156 230,204 210,240" stroke="rgba(255,255,255,0.1)" stroke-width="0.8" fill="none" stroke-linecap="round"/><path d="M30,48 L210,48 M30,96 L210,96 M30,144 L210,144 M30,192 L210,192" stroke="rgba(255,255,255,0.06)" stroke-width="0.4" fill="none"/></svg>');
+  background-image: 
+    /* Planet 1 - Mercury-like */
+    radial-gradient(circle 8px at 60% 45%, rgba(169,169,169,0.8), rgba(105,105,105,0.6) 50%, transparent 70%),
+    /* Planet 2 - Venus-like */
+    radial-gradient(circle 12px at 35% 60%, rgba(255,198,73,0.7), rgba(255,140,0,0.5) 50%, transparent 70%),
+    /* Planet 3 - Earth-like */
+    radial-gradient(circle 14px at 75% 35%, rgba(100,149,237,0.8), rgba(34,139,34,0.6) 30%, rgba(0,100,0,0.4) 60%, transparent 70%),
+    /* Planet 4 - Mars-like */
+    radial-gradient(circle 10px at 25% 75%, rgba(205,92,92,0.8), rgba(139,69,19,0.6) 50%, transparent 70%),
+    /* Distant stars */
+    radial-gradient(1px 1px at 85% 15%, rgba(255,255,255,0.9), transparent),
+    radial-gradient(1px 1px at 15% 25%, rgba(255,255,255,0.7), transparent),
+    radial-gradient(2px 2px at 95% 85%, rgba(255,255,255,0.8), transparent);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
   pointer-events: none;
   z-index: 1;
   opacity: 0;
-  animation: circuit-fade-in 2s ease-out 2.5s forwards;
+  animation: planets-orbit 20s linear infinite, solar-system-fade-in 2.5s ease-out 2s forwards;
 }
-
 
   h1, h2, h3, h4, h5, h6 {
     @apply font-agency font-medium tracking-tight;
@@ -136,11 +165,11 @@ body::after {
   scrollbar-color: rgba(255, 255, 255, 0.2) rgba(0, 0, 0, 1);
 }
 
-/* Circuit Animations */
-@keyframes circuit-fade-in {
+/* Solar System Animations */
+@keyframes solar-system-fade-in {
   0% {
     opacity: 0;
-    transform: scale(0.95);
+    transform: scale(0.9);
   }
   100% {
     opacity: 1;
@@ -148,25 +177,12 @@ body::after {
   }
 }
 
-@keyframes circuit-nodes-animate {
+@keyframes planets-orbit {
   0% {
-    opacity: 0;
-    transform: scale(0.8);
+    transform: rotate(0deg);
   }
   100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-@keyframes circuit-pulse {
-  0%, 100% {
-    opacity: 1;
-    filter: brightness(1);
-  }
-  50% {
-    opacity: 0.7;
-    filter: brightness(1.3);
+    transform: rotate(360deg);
   }
 }
 
