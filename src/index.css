@@ -62,14 +62,14 @@ body::before {
   bottom: 0;
   background-image: 
     /* Distant stars - smallest */
-    radial-gradient(1px 1px at 15% 20%, rgba(255,255,255,0.9), transparent),
-    radial-gradient(1px 1px at 85% 25%, rgba(255,255,255,0.7), transparent),
-    radial-gradient(1px 1px at 25% 80%, rgba(255,255,255,0.8), transparent),
-    radial-gradient(1px 1px at 75% 85%, rgba(255,255,255,0.6), transparent),
-    radial-gradient(1px 1px at 10% 60%, rgba(255,255,255,0.9), transparent),
-    radial-gradient(1px 1px at 90% 15%, rgba(255,255,255,0.8), transparent),
-    radial-gradient(1px 1px at 35% 10%, rgba(255,255,255,0.7), transparent),
-    radial-gradient(1px 1px at 65% 90%, rgba(255,255,255,0.8), transparent),
+    radial-gradient(3px 3px at 15% 20%, rgba(255,255,255,0.9), transparent),
+    radial-gradient(3px 3px at 85% 25%, rgba(255,255,255,0.7), transparent),
+    radial-gradient(3px 3px at 25% 80%, rgba(255,255,255,0.8), transparent),
+    radial-gradient(3px 3px at 75% 85%, rgba(255,255,255,0.6), transparent),
+    radial-gradient(3px 3px at 10% 60%, rgba(255,255,255,0.9), transparent),
+    radial-gradient(3px 3px at 90% 15%, rgba(255,255,255,0.8), transparent),
+    radial-gradient(3px 3px at 35% 10%, rgba(255,255,255,0.7), transparent),
+    radial-gradient(3px 3px at 65% 90%, rgba(255,255,255,0.8), transparent),
     /* Central Sun - largest and most prominent */
     radial-gradient(circle at 50% 40%, rgba(255,215,0,0.6) 0%, rgba(255,140,0,0.4) 15%, rgba(255,69,0,0.2) 30%, transparent 45%),
     /* Orbital rings */
