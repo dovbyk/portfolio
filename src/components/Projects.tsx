@@ -18,7 +18,7 @@ const Projects: React.FC = () => {
       description: "Visualize any mathematical equations or machine learning algorithms with beautiful animations and voiceovers just by a single prompt",
       image: 'https://e7.pngegg.com/pngimages/9/267/png-clipart-senior-management-business-project-management-project-manager-team-members-text-service.png',
       tags: ["Python", "Manim", "Gemini API"],
-      demoLink: "promptanimate.vercel.app"
+      demoLink: "promptanimate.vercel.app",
       codeLink: "https://github.com/dovbyk/manim-video-generator",
     },
     {
