@@ -77,7 +77,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
               <span>Try it</span>
             </button>
           )}
-          {title === "PromptAnimate" && demoLink && (
+          {title === "PromptToAnimation" && demoLink && (
             <button
               onClick={() => handleOpenDemo(demoLink)}
               className="px-4 py-2 bg-black-800 hover:bg-gray-700 text-white rounded-md flex items-center gap-2 transition"
