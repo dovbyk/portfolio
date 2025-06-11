@@ -87,7 +87,7 @@ body::before {
   z-index: 1;
   opacity: 0;
   transform: scale(1.4);
-  animation: solar-system-fade-in 4s ease-out forwards;
+  animation: solar-system-fade-in 4s ease-out 2s forwards;
 }
 
 /* Planets layer - 8 planets orbiting the sun */
@@ -121,7 +121,7 @@ body::after {
   z-index: 2;
   opacity: 0;
   transform: scale(1.4);
-  animation: planets-orbit 25s linear infinite, solar-system-fade-in 4s ease-out 0.5s forwards;
+  animation: planets-orbit 25s linear infinite, solar-system-fade-in 4s ease-out 2s forwards;
   transform-origin: 50% 40%;
 }
 
