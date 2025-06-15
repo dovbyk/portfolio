@@ -22,11 +22,11 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header className="fixed top-0 w-full z-50 py-4 px-6 md:px-12">
+    <header className="fixed top-0 w-full z-50 py-4 px-4 md:px-6">
       <div className={cn(
         "mx-auto flex items-center transition-all duration-[2500ms] ease-out",
         isScrolled 
-          ? "justify-center bg-white/5 backdrop-blur-md rounded-full px-8 py-3 border border-white/10 max-w-4xl" 
+          ? "justify-center bg-white/5 backdrop-blur-md rounded-full px-6 py-3 border border-white/10 max-w-3xl" 
           : "justify-between max-w-full"
       )}>
         {/* Enhanced Minimalistic Logo */}
@@ -46,7 +46,7 @@ const Header: React.FC = () => {
         {/* Desktop Navigation */}
         <nav className={cn(
           "hidden md:flex items-center transition-all duration-[2500ms] ease-out",
-          isScrolled ? "space-x-6 ml-8" : "space-x-24"
+          isScrolled ? "space-x-8 ml-8" : "space-x-16"
         )}>
           <a href="#home" className="text-white/80 hover:text-white transition-colors duration-300 font-medium link-underline font-agency text-lg">Home</a>
           <a href="#about" className="text-white/80 hover:text-white transition-colors duration-300 font-medium link-underline font-agency text-lg">About</a>
