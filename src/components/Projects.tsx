@@ -42,7 +42,7 @@ const Projects: React.FC = () => {
     {
       title: "SaveThePac",
       description: "A customized version of the traditional PacMan game. Skip past all the obstacles that come along the way and collect as many points.",
-      image: 'https://www.shutterstock.com/shutterstock/photos/1654081297/display_1500/stock-vector-spiral-sound-wave-rhythm-line-dynamic-abstract-vector-background-1654081297.jpg',
+      image: 'https://static.vecteezy.com/system/resources/thumbnails/014/927/864/small_2x/futuristic-round-target-animation-for-overlay-hud-display-monitor-for-modern-effects-and-high-technology-free-video.jpg',
       tags: ["Java", "Swing"],
       demoLink: "dovbyk.github.io/pacman.js",
       codeLink: "https://github.com/dovbyk/PacMan",
