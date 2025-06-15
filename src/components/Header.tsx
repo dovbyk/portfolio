@@ -37,7 +37,7 @@ const Header: React.FC = () => {
           <img 
             src="/logo.png" 
             alt="Logo" 
-            className="w-10 h-10 object-contain"
+            className="w-11 h-11 object-contain"
           />
         </div>
 
@@ -77,28 +77,28 @@ const Header: React.FC = () => {
         <nav className="flex flex-col space-y-8 items-center">
           <a 
             href="#home" 
-            className="text-xl text-white/80 hover:text-white transition-colors font-agency" 
+            className="text-2xl text-white/80 hover:text-white transition-colors font-agency" 
             onClick={toggleMobileMenu}
           >
             Home
           </a>
           <a 
             href="#about" 
-            className="text-xl text-white/80 hover:text-white transition-colors font-agency" 
+            className="text-2xl text-white/80 hover:text-white transition-colors font-agency" 
             onClick={toggleMobileMenu}
           >
             About
           </a>
           <a 
             href="#projects" 
-            className="text-xl text-white/80 hover:text-white transition-colors font-agency" 
+            className="text-2xl text-white/80 hover:text-white transition-colors font-agency" 
             onClick={toggleMobileMenu}
           >
             Projects
           </a>
           <a 
             href="#contact" 
-            className="text-xl text-white/80 hover:text-white transition-colors font-agency" 
+            className="text-2xl text-white/80 hover:text-white transition-colors font-agency" 
             onClick={toggleMobileMenu}
           >
             Contact
