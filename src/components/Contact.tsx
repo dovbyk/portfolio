@@ -157,7 +157,7 @@ const Contact: React.FC = () => {
                     onChange={handleChange}
                     required
                     className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-transparent transition-all duration-300"
-                    placeholder="John Doe"
+                    placeholder="Your Name"
                   />
                 </div>
                 
@@ -173,7 +173,7 @@ const Contact: React.FC = () => {
                     onChange={handleChange}
                     required
                     className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-transparent transition-all duration-300"
-                    placeholder="john@example.com"
+                    placeholder="name@example.com"
                   />
                 </div>
                 
@@ -189,7 +189,7 @@ const Contact: React.FC = () => {
                     required
                     rows={5}
                     className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-transparent transition-all duration-300 resize-none"
-                    placeholder="Hello, I'm interested in working with you on a project..."
+                    placeholder="Just drop a random text"
                   ></textarea>
                 </div>
                 
