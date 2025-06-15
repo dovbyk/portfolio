@@ -1,5 +1,4 @@
 
-
 import React, { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 import { Menu, X } from 'lucide-react';
@@ -30,18 +29,16 @@ const Header: React.FC = () => {
           ? "justify-center bg-white/5 backdrop-blur-md rounded-full px-6 py-3 border border-white/10 max-w-3xl" 
           : "justify-between max-w-full"
       )}>
-        {/* Enhanced Minimalistic Logo */}
+        {/* Logo Placeholder */}
         <div className={cn(
           "flex items-center transition-all duration-[2500ms] ease-out",
           isScrolled ? "transform translate-x-0" : ""
         )}>
-          <div className="relative">
-            <div className="w-8 h-8 border-2 border-white rounded-lg flex items-center justify-center transform rotate-12 bg-gradient-to-br from-white/20 to-transparent">
-              <div className="w-2 h-2 bg-white rounded-sm transform -rotate-12"></div>
-            </div>
-            <div className="absolute -top-1 -right-1 w-1.5 h-1.5 border border-white/70 rounded-sm transform rotate-45"></div>
-            <div className="absolute -bottom-1 -left-1 w-1 h-1 bg-white/40 rounded-full"></div>
-          </div>
+          <img 
+            src="/logo.png" 
+            alt="Logo" 
+            className="w-8 h-8 object-contain"
+          />
         </div>
 
         {/* Desktop Navigation */}
