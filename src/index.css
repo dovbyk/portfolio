@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
@@ -52,7 +53,7 @@
     overflow-x: hidden;
   }
 
-/* Solar System Background */
+/* Enhanced Solar System Background */
 body::before {
   content: '';
   position: fixed;
@@ -61,36 +62,50 @@ body::before {
   right: 0;
   bottom: 0;
   background-image: 
-    /* Distant stars - smallest */
-    radial-gradient(3px 3px at 15% 20%, rgba(255,255,255,0.9), transparent),
-    radial-gradient(3px 3px at 85% 25%, rgba(255,255,255,0.7), transparent),
-    radial-gradient(3px 3px at 25% 80%, rgba(255,255,255,0.8), transparent),
-    radial-gradient(3px 3px at 75% 85%, rgba(255,255,255,0.6), transparent),
-    radial-gradient(3px 3px at 10% 60%, rgba(255,255,255,0.9), transparent),
-    radial-gradient(3px 3px at 90% 15%, rgba(255,255,255,0.8), transparent),
-    radial-gradient(3px 3px at 35% 10%, rgba(255,255,255,0.7), transparent),
-    radial-gradient(3px 3px at 65% 90%, rgba(255,255,255,0.8), transparent),
-    /* Central Sun - largest and most prominent */
-    radial-gradient(circle at 50% 40%, rgba(255,215,0,0.6) 0%, rgba(255,140,0,0.4) 15%, rgba(255,69,0,0.2) 30%, transparent 45%),
-    /* Orbital rings */
-    radial-gradient(circle at 50% 40%, transparent 80px, rgba(255,255,255,0.15) 81px, rgba(255,255,255,0.15) 83px, transparent 84px),
-    radial-gradient(circle at 50% 40%, transparent 120px, rgba(255,255,255,0.12) 121px, rgba(255,255,255,0.12) 122px, transparent 123px),
-    radial-gradient(circle at 50% 40%, transparent 160px, rgba(255,255,255,0.1) 161px, rgba(255,255,255,0.1) 162px, transparent 163px),
-    radial-gradient(circle at 50% 40%, transparent 200px, rgba(255,255,255,0.08) 201px, rgba(255,255,255,0.08) 202px, transparent 203px),
-    radial-gradient(circle at 50% 40%, transparent 240px, rgba(255,255,255,0.06) 241px, rgba(255,255,255,0.06) 242px, transparent 243px),
-    radial-gradient(circle at 50% 40%, transparent 280px, rgba(255,255,255,0.05) 281px, rgba(255,255,255,0.05) 282px, transparent 283px),
-    radial-gradient(circle at 50% 40%, transparent 320px, rgba(255,255,255,0.04) 321px, rgba(255,255,255,0.04) 322px, transparent 323px),
-    radial-gradient(circle at 50% 40%, transparent 360px, rgba(255,255,255,0.03) 361px, rgba(255,255,255,0.03) 362px, transparent 363px);
-  background-repeat: repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
-  background-size: 200px 150px, 200px 150px, 200px 150px, 200px 150px, 200px 150px, 200px 150px, 200px 150px, 200px 150px, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%;
+    /* Layered star fields for depth */
+    radial-gradient(2px 2px at 12% 15%, rgba(255,255,255,0.9), transparent),
+    radial-gradient(2px 2px at 88% 22%, rgba(255,255,255,0.8), transparent),
+    radial-gradient(1px 1px at 25% 8%, rgba(255,255,255,0.7), transparent),
+    radial-gradient(1px 1px at 75% 12%, rgba(255,255,255,0.9), transparent),
+    radial-gradient(2px 2px at 15% 85%, rgba(255,255,255,0.6), transparent),
+    radial-gradient(1px 1px at 85% 88%, rgba(255,255,255,0.8), transparent),
+    radial-gradient(1px 1px at 35% 92%, rgba(255,255,255,0.7), transparent),
+    radial-gradient(2px 2px at 65% 5%, rgba(255,255,255,0.9), transparent),
+    radial-gradient(1px 1px at 45% 25%, rgba(255,255,255,0.6), transparent),
+    radial-gradient(1px 1px at 55% 75%, rgba(255,255,255,0.8), transparent),
+    radial-gradient(2px 2px at 5% 45%, rgba(255,255,255,0.7), transparent),
+    radial-gradient(1px 1px at 95% 55%, rgba(255,255,255,0.9), transparent),
+    radial-gradient(1px 1px at 20% 65%, rgba(255,255,255,0.6), transparent),
+    radial-gradient(2px 2px at 80% 35%, rgba(255,255,255,0.8), transparent),
+    /* Nebula-like gas clouds */
+    radial-gradient(ellipse 200px 150px at 20% 30%, rgba(255,255,255,0.03), transparent 60%),
+    radial-gradient(ellipse 180px 120px at 80% 70%, rgba(255,255,255,0.04), transparent 60%),
+    radial-gradient(ellipse 160px 100px at 15% 75%, rgba(255,255,255,0.02), transparent 60%),
+    /* Central Sun with enhanced glow */
+    radial-gradient(circle at 50% 45%, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.7) 8%, rgba(255,255,255,0.4) 16%, rgba(255,255,255,0.2) 24%, rgba(255,255,255,0.1) 32%, transparent 40%),
+    /* Multiple orbital rings with varying opacity */
+    radial-gradient(circle at 50% 45%, transparent 100px, rgba(255,255,255,0.25) 101px, rgba(255,255,255,0.25) 103px, transparent 104px),
+    radial-gradient(circle at 50% 45%, transparent 140px, rgba(255,255,255,0.2) 141px, rgba(255,255,255,0.2) 142px, transparent 143px),
+    radial-gradient(circle at 50% 45%, transparent 180px, rgba(255,255,255,0.18) 181px, rgba(255,255,255,0.18) 182px, transparent 183px),
+    radial-gradient(circle at 50% 45%, transparent 220px, rgba(255,255,255,0.15) 221px, rgba(255,255,255,0.15) 222px, transparent 223px),
+    radial-gradient(circle at 50% 45%, transparent 260px, rgba(255,255,255,0.12) 261px, rgba(255,255,255,0.12) 262px, transparent 263px),
+    radial-gradient(circle at 50% 45%, transparent 300px, rgba(255,255,255,0.1) 301px, rgba(255,255,255,0.1) 302px, transparent 303px),
+    radial-gradient(circle at 50% 45%, transparent 340px, rgba(255,255,255,0.08) 341px, rgba(255,255,255,0.08) 342px, transparent 343px),
+    radial-gradient(circle at 50% 45%, transparent 380px, rgba(255,255,255,0.06) 381px, rgba(255,255,255,0.06) 382px, transparent 383px),
+    /* Asteroid belt effect */
+    radial-gradient(circle at 50% 45%, transparent 280px, rgba(255,255,255,0.4) 281px, transparent 282px),
+    radial-gradient(circle at 50% 45%, transparent 285px, rgba(255,255,255,0.3) 286px, transparent 287px),
+    radial-gradient(circle at 50% 45%, transparent 290px, rgba(255,255,255,0.2) 291px, transparent 292px);
+  background-repeat: repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
+  background-size: 300px 200px, 300px 200px, 250px 180px, 250px 180px, 300px 200px, 250px 180px, 250px 180px, 300px 200px, 250px 180px, 250px 180px, 300px 200px, 250px 180px, 250px 180px, 300px 200px, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%;
   pointer-events: none;
   z-index: 1;
   opacity: 0;
-  transform: scale(1.4);
-  animation: solar-system-fade-in 4s ease-out 2s forwards;
+  transform: scale(1.3) rotate(-5deg);
+  animation: solar-system-fade-in 3s ease-out 1.5s forwards;
 }
 
-/* Planets layer - 8 planets orbiting the sun */
+/* Enhanced Planets layer with improved positioning and effects */
 body::after {
   content: '';
   position: fixed;
@@ -99,30 +114,35 @@ body::after {
   right: 0;
   bottom: 0;
   background-image: 
-    /* Planet 1 - Mercury (smallest planet, closest orbit) */
-    radial-gradient(circle 4px at 50% 40%, rgba(169,169,169,0.9), rgba(105,105,105,0.7) 50%, transparent 70%),
-    /* Planet 2 - Venus */
-    radial-gradient(circle 6px at 50% 40%, rgba(255,198,73,0.8), rgba(255,140,0,0.6) 50%, transparent 70%),
-    /* Planet 3 - Earth */
-    radial-gradient(circle 7px at 50% 40%, rgba(100,149,237,0.9), rgba(34,139,34,0.7) 30%, rgba(0,100,0,0.5) 60%, transparent 70%),
-    /* Planet 4 - Mars */
-    radial-gradient(circle 5px at 50% 40%, rgba(205,92,92,0.8), rgba(139,69,19,0.6) 50%, transparent 70%),
-    /* Planet 5 - Jupiter (largest planet) */
-    radial-gradient(circle 12px at 50% 40%, rgba(210,180,140,0.8), rgba(160,82,45,0.6) 40%, rgba(139,69,19,0.4) 70%, transparent 80%),
-    /* Planet 6 - Saturn */
-    radial-gradient(circle 10px at 50% 40%, rgba(250,235,215,0.8), rgba(218,165,32,0.6) 50%, transparent 70%),
-    /* Planet 7 - Uranus */
-    radial-gradient(circle 8px at 50% 40%, rgba(64,224,208,0.8), rgba(0,206,209,0.6) 50%, transparent 70%),
-    /* Planet 8 - Neptune */
-    radial-gradient(circle 8px at 50% 40%, rgba(30,144,255,0.8), rgba(0,0,139,0.6) 50%, transparent 70%);
+    /* Mercury - small, fast orbit */
+    radial-gradient(circle 3px at 50% 45%, rgba(255,255,255,0.8), rgba(200,200,200,0.6) 50%, transparent 70%),
+    /* Venus - bright */
+    radial-gradient(circle 4.5px at 50% 45%, rgba(255,255,255,0.9), rgba(240,240,240,0.7) 50%, transparent 70%),
+    /* Earth - medium blue-white */
+    radial-gradient(circle 5px at 50% 45%, rgba(255,255,255,0.8), rgba(180,180,180,0.6) 40%, transparent 70%),
+    /* Mars - smaller reddish-white */
+    radial-gradient(circle 4px at 50% 45%, rgba(255,255,255,0.7), rgba(200,200,200,0.5) 50%, transparent 70%),
+    /* Jupiter - largest planet */
+    radial-gradient(circle 10px at 50% 45%, rgba(255,255,255,0.9), rgba(220,220,220,0.7) 30%, rgba(180,180,180,0.5) 60%, transparent 80%),
+    /* Saturn - with ring effect */
+    radial-gradient(circle 8px at 50% 45%, rgba(255,255,255,0.8), rgba(210,210,210,0.6) 50%, transparent 70%),
+    radial-gradient(ellipse 16px 2px at 50% 45%, rgba(255,255,255,0.4), transparent 50%),
+    /* Uranus */
+    radial-gradient(circle 6px at 50% 45%, rgba(255,255,255,0.7), rgba(190,190,190,0.5) 50%, transparent 70%),
+    /* Neptune - outermost */
+    radial-gradient(circle 6px at 50% 45%, rgba(255,255,255,0.8), rgba(170,170,170,0.6) 50%, transparent 70%),
+    /* Shooting stars/comets */
+    linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.8) 50%, transparent 70%),
+    linear-gradient(135deg, transparent 40%, rgba(255,255,255,0.6) 50%, transparent 60%),
+    linear-gradient(-45deg, transparent 35%, rgba(255,255,255,0.7) 50%, transparent 65%);
   background-repeat: no-repeat;
   background-size: 100% 100%;
   pointer-events: none;
   z-index: 2;
   opacity: 0;
-  transform: scale(1.4);
-  animation: planets-orbit 25s linear infinite, solar-system-fade-in 4s ease-out 2s forwards;
-  transform-origin: 50% 40%;
+  transform: scale(1.3) rotate(-5deg);
+  animation: planets-orbit 30s linear infinite, solar-system-fade-in 3s ease-out 1.5s forwards;
+  transform-origin: 50% 45%;
 }
 
   h1, h2, h3, h4, h5, h6 {
@@ -179,39 +199,41 @@ body::after {
   scrollbar-color: rgba(255, 255, 255, 0.2) rgba(0, 0, 0, 1);
 }
 
-/* Solar System Animations */
+/* Enhanced Solar System Animations */
 @keyframes solar-system-fade-in {
   0% {
     opacity: 0;
-    transform: scale(1.4); /* Start zoomed out */
+    transform: scale(1.5) rotate(-8deg);
   }
-  10% {
-    opacity: 0.1;
+  20% {
+    opacity: 0.2;
+    transform: scale(1.4) rotate(-6deg);
   }
-  40% {
-    opacity: 0.6;
+  60% {
+    opacity: 0.7;
+    transform: scale(1.1) rotate(-2deg);
   }
   100% {
     opacity: 1;
-    transform: scale(1); /* End at normal size */
+    transform: scale(1) rotate(0deg);
   }
 }
 
 @keyframes planets-orbit {
   0% {
-    transform: rotate(0deg) scale(1);
+    transform: scale(1) rotate(0deg);
   }
   25% {
-    transform: rotate(90deg) scale(1.05);
+    transform: scale(1.02) rotate(90deg);
   }
   50% {
-    transform: rotate(180deg) scale(1);
+    transform: scale(1) rotate(180deg);
   }
   75% {
-    transform: rotate(270deg) scale(0.95);
+    transform: scale(0.98) rotate(270deg);
   }
   100% {
-    transform: rotate(360deg) scale(1);
+    transform: scale(1) rotate(360deg);
   }
 }
 
