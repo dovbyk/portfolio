@@ -5,9 +5,9 @@ import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import { cn } from '@/lib/utils';
 
 const Projects: React.FC = () => {
-  const { ref: headerRef, isVisible: headerVisible } = useScrollAnimation<HTMLDivElement>({ delay: 100 });
-  const { ref: gridRef, isVisible: gridVisible } = useScrollAnimation<HTMLDivElement>({ delay: 300 });
-  const { ref: buttonRef, isVisible: buttonVisible } = useScrollAnimation<HTMLDivElement>({ delay: 500 });
+  const { ref: headerRef, isVisible: headerVisible } = useScrollAnimation<HTMLDivElement>({ delay: 200, threshold: 0.3 });
+  const { ref: gridRef, isVisible: gridVisible } = useScrollAnimation<HTMLDivElement>({ delay: 400, threshold: 0.2 });
+  const { ref: buttonRef, isVisible: buttonVisible } = useScrollAnimation<HTMLDivElement>({ delay: 600, threshold: 0.5 });
 
   const projects = [
     {
@@ -46,8 +46,8 @@ const Projects: React.FC = () => {
         <div 
           ref={headerRef}
           className={cn(
-            "text-center mb-16 transition-all duration-800 transform",
-            headerVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+            "text-center mb-16 transition-all duration-1000 transform",
+            headerVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-16"
           )}
         >
           <div className="inline-block mb-6 px-4 py-1 border border-white/10 rounded-full">
@@ -73,8 +73,8 @@ const Projects: React.FC = () => {
         <div 
           ref={gridRef}
           className={cn(
-            "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 transition-all duration-800 transform",
-            gridVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
+            "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 transition-all duration-1200 transform",
+            gridVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20"
           )}
         >
           {projects.map((project, index) => (
@@ -94,8 +94,8 @@ const Projects: React.FC = () => {
         <div 
           ref={buttonRef}
           className={cn(
-            "text-center mt-16 transition-all duration-800 transform",
-            buttonVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+            "text-center mt-16 transition-all duration-1000 transform",
+            buttonVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
           )}
         >
           <a 

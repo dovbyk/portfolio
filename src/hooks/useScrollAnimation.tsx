@@ -5,10 +5,11 @@ interface UseScrollAnimationOptions {
   threshold?: number;
   delay?: number;
   once?: boolean;
+  rootMargin?: string;
 }
 
 export const useScrollAnimation = <T extends HTMLElement = HTMLElement>(options: UseScrollAnimationOptions = {}) => {
-  const { threshold = 0.1, delay = 0, once = true } = options;
+  const { threshold = 0.2, delay = 0, once = true, rootMargin = '0px 0px -100px 0px' } = options;
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef<T>(null);
 
@@ -30,7 +31,10 @@ export const useScrollAnimation = <T extends HTMLElement = HTMLElement>(options:
           }
         });
       },
-      { threshold }
+      { 
+        threshold,
+        rootMargin
+      }
     );
 
     observer.observe(element);
@@ -38,7 +42,7 @@ export const useScrollAnimation = <T extends HTMLElement = HTMLElement>(options:
     return () => {
       if (element) observer.unobserve(element);
     };
-  }, [threshold, delay, once]);
+  }, [threshold, delay, once, rootMargin]);
 
   return { ref, isVisible };
 };
