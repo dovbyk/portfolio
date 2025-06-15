@@ -24,17 +24,40 @@ const Header: React.FC = () => {
   return (
     <header 
       className={cn(
-        "fixed top-0 w-full z-50 transition-all duration-300 py-4 px-6 md:px-12",
-        isScrolled ? "backdrop-blur-md bg-black/70 shadow-md" : "bg-transparent"
+        "fixed top-0 w-full z-50 transition-all duration-500 py-4 px-6 md:px-12",
+        isScrolled 
+          ? "backdrop-blur-md bg-black/80 shadow-lg border-b border-white/5" 
+          : "bg-transparent"
       )}
     >
-      <div className="max-w-7xl mx-auto flex items-center justify-between">
-        <a href="#" className="text-2xl md:text-3xl font-agency font-bold text-white">
-          Portfolio<span className="text-[#3B82F6]">.</span>
-        </a>
+      <div className={cn(
+        "max-w-7xl mx-auto flex items-center transition-all duration-500",
+        isScrolled ? "justify-center" : "justify-between"
+      )}>
+        {/* Minimalistic Logo */}
+        <div className={cn(
+          "flex items-center transition-all duration-500",
+          isScrolled && "absolute left-6"
+        )}>
+          <div className="relative">
+            <div className="w-10 h-10 border-2 border-white rounded-lg flex items-center justify-center">
+              <div className="w-3 h-3 bg-white rounded-full"></div>
+            </div>
+            <div className="absolute -top-1 -right-1 w-3 h-3 border border-white/50 rounded-full"></div>
+          </div>
+          <span className={cn(
+            "ml-3 text-xl font-agency font-bold text-white transition-opacity duration-300",
+            isScrolled && "md:opacity-0"
+          )}>
+            Dev
+          </span>
+        </div>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-10">
+        <nav className={cn(
+          "hidden md:flex items-center space-x-8 transition-all duration-500",
+          isScrolled && "bg-white/5 backdrop-blur-sm px-6 py-2 rounded-full border border-white/10"
+        )}>
           <a href="#home" className="text-white/80 hover:text-white transition-colors font-medium link-underline font-agency">Home</a>
           <a href="#about" className="text-white/80 hover:text-white transition-colors font-medium link-underline font-agency">About</a>
           <a href="#projects" className="text-white/80 hover:text-white transition-colors font-medium link-underline font-agency">Projects</a>
@@ -43,7 +66,7 @@ const Header: React.FC = () => {
 
         {/* Mobile Menu Button */}
         <button 
-          className="md:hidden text-white"
+          className="md:hidden text-white z-50"
           onClick={toggleMobileMenu}
           aria-label="Toggle menu"
         >
@@ -54,7 +77,7 @@ const Header: React.FC = () => {
       {/* Mobile Menu */}
       <div 
         className={cn(
-          "fixed inset-0 bg-black z-40 pt-24 px-6 flex flex-col",
+          "fixed inset-0 bg-black/95 backdrop-blur-lg z-40 pt-24 px-6 flex flex-col",
           "transition-transform duration-300 ease-in-out",
           mobileMenuOpen ? "translate-x-0" : "translate-x-full",
           "md:hidden"

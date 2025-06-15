@@ -2,8 +2,14 @@
 import React from 'react';
 import ProjectCard from './ProjectCard';
 import AnimatedText from './AnimatedText';
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+import { cn } from '@/lib/utils';
 
 const Projects: React.FC = () => {
+  const { ref: headerRef, isVisible: headerVisible } = useScrollAnimation({ delay: 100 });
+  const { ref: gridRef, isVisible: gridVisible } = useScrollAnimation({ delay: 300 });
+  const { ref: buttonRef, isVisible: buttonVisible } = useScrollAnimation({ delay: 500 });
+
   const projects = [
     {
       title: "DeepScript",
@@ -38,7 +44,13 @@ const Projects: React.FC = () => {
       </div>
       
       <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-16">
+        <div 
+          ref={headerRef}
+          className={cn(
+            "text-center mb-16 transition-all duration-800 transform",
+            headerVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+          )}
+        >
           <div className="inline-block mb-6 px-4 py-1 border border-white/10 rounded-full">
             <span className="text-white/80 text-sm font-medium">MY WORK</span>
           </div>
@@ -59,7 +71,13 @@ const Projects: React.FC = () => {
           />
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div 
+          ref={gridRef}
+          className={cn(
+            "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 transition-all duration-800 transform",
+            gridVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
+          )}
+        >
           {projects.map((project, index) => (
             <ProjectCard
               key={index}
@@ -74,7 +92,13 @@ const Projects: React.FC = () => {
           ))}
         </div>
         
-        <div className="text-center mt-16" style={{ opacity: 0, animation: 'fade-in 0.8s ease-out 1s forwards' }}>
+        <div 
+          ref={buttonRef}
+          className={cn(
+            "text-center mt-16 transition-all duration-800 transform",
+            buttonVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+          )}
+        >
           <a 
             href="https://github.com/dovbyk" 
             target="_blank" 
