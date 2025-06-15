@@ -26,7 +26,7 @@ const Projects: React.FC = () => {
     {
       title: "DeepScript",
       description: "A Transformer model which takes handwriting sample from user and converts any digital text into a realistic handwriting ",
-      image: 'https://images.unsplash.com/photo-1684369175833-4b445ad6bfb5?q=80&w=1996&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      image: 'https://images.unsplash.com/photo-1484807352052-23338990c6c6?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       tags: ["Python", "Machine Learning", "React"],
       demoLink: "deepscript.vercel.app",
       codeLink: "https://github.com/dovbyk/DeepScript",
@@ -34,7 +34,7 @@ const Projects: React.FC = () => {
     {
       title: "PromptToAnimation",
       description: "Visualize any mathematical equations or ML algorithms with beautiful animations and voiceovers just by a single prompt.",
-      image: 'https://e7.pngegg.com/pngimages/9/267/png-clipart-senior-management-business-project-management-project-manager-team-members-text-service.png',
+      image: 'https://thumbs.dreamstime.com/z/black-white-photo-computer-screen-suitable-technology-concepts-black-white-photo-computer-screen-359699076.jpg?ct=jpeg',
       tags: ["Python", "Manim", "Gemini API"],
       demoLink: "promptanimate.vercel.app",
       codeLink: "https://github.com/dovbyk/manim-video-generator",
@@ -42,7 +42,7 @@ const Projects: React.FC = () => {
     {
       title: "SaveThePac",
       description: "A customized version of the traditional PacMan game. Skip past all the obstacles that come along the way and collect as many points.",
-      image: 'https://png.pngtree.com/background/20230716/original/pngtree-realistic-discord-icon-logo-in-3d-rendering-picture-image_4237831.jpg',
+      image: 'https://as2.ftcdn.net/v2/jpg/13/03/62/91/1000_F_1303629148_Vvl6jtzatoAFjTfeHv6WmL6aCVl8RdZk.jpg',
       tags: ["Java", "Swing"],
       demoLink: "dovbyk.github.io/pacman.js",
       codeLink: "https://github.com/dovbyk/PacMan",
