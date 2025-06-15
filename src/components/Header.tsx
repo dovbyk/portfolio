@@ -24,14 +24,14 @@ const Header: React.FC = () => {
   return (
     <header className="fixed top-0 w-full z-50 py-4 px-6 md:px-12">
       <div className={cn(
-        "mx-auto flex items-center transition-all duration-[1500ms] ease-out",
+        "mx-auto flex items-center transition-all duration-[2500ms] ease-out",
         isScrolled 
           ? "justify-center bg-white/5 backdrop-blur-md rounded-full px-8 py-3 border border-white/10 max-w-4xl" 
-          : "justify-between max-w-7xl"
+          : "justify-between max-w-full"
       )}>
         {/* Enhanced Minimalistic Logo */}
         <div className={cn(
-          "flex items-center transition-all duration-[1500ms] ease-out",
+          "flex items-center transition-all duration-[2500ms] ease-out",
           isScrolled ? "transform translate-x-0" : ""
         )}>
           <div className="relative">
@@ -45,8 +45,8 @@ const Header: React.FC = () => {
 
         {/* Desktop Navigation */}
         <nav className={cn(
-          "hidden md:flex items-center transition-all duration-[1500ms] ease-out",
-          isScrolled ? "space-x-6 ml-8" : "space-x-16"
+          "hidden md:flex items-center transition-all duration-[2500ms] ease-out",
+          isScrolled ? "space-x-6 ml-8" : "space-x-24"
         )}>
           <a href="#home" className="text-white/80 hover:text-white transition-colors duration-300 font-medium link-underline font-agency text-lg">Home</a>
           <a href="#about" className="text-white/80 hover:text-white transition-colors duration-300 font-medium link-underline font-agency text-lg">About</a>
@@ -57,7 +57,7 @@ const Header: React.FC = () => {
         {/* Mobile Menu Button */}
         <button 
           className={cn(
-            "md:hidden text-white z-50 transition-all duration-[1500ms] ease-out",
+            "md:hidden text-white z-50 transition-all duration-[2500ms] ease-out",
             isScrolled && "absolute right-6"
           )}
           onClick={toggleMobileMenu}
