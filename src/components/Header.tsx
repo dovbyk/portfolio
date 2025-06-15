@@ -24,21 +24,21 @@ const Header: React.FC = () => {
   return (
     <header className="fixed top-0 w-full z-50 py-4 px-6 md:px-12">
       <div className={cn(
-        "max-w-7xl mx-auto flex items-center transition-all duration-1000 ease-out",
+        "mx-auto flex items-center transition-all duration-1000 ease-out",
         isScrolled 
-          ? "justify-center bg-white/5 backdrop-blur-md rounded-full px-8 py-3 border border-white/10" 
-          : "justify-between"
+          ? "justify-center bg-white/5 backdrop-blur-md rounded-full px-6 py-3 border border-white/10 max-w-2xl" 
+          : "justify-between max-w-7xl"
       )}>
         {/* Enhanced Minimalistic Logo */}
         <div className={cn(
           "flex items-center transition-all duration-1000 ease-out",
-          isScrolled ? "mr-12" : ""
+          isScrolled ? "mr-8" : ""
         )}>
           <div className="relative">
-            <div className="w-10 h-10 border-2 border-white rounded-lg flex items-center justify-center transform rotate-12 bg-gradient-to-br from-white/20 to-transparent">
-              <div className="w-3 h-3 bg-white rounded-sm transform -rotate-12"></div>
+            <div className="w-8 h-8 border-2 border-white rounded-lg flex items-center justify-center transform rotate-12 bg-gradient-to-br from-white/20 to-transparent">
+              <div className="w-2 h-2 bg-white rounded-sm transform -rotate-12"></div>
             </div>
-            <div className="absolute -top-1 -right-1 w-2 h-2 border border-white/70 rounded-sm transform rotate-45"></div>
+            <div className="absolute -top-1 -right-1 w-1.5 h-1.5 border border-white/70 rounded-sm transform rotate-45"></div>
             <div className="absolute -bottom-1 -left-1 w-1 h-1 bg-white/40 rounded-full"></div>
           </div>
         </div>
@@ -46,7 +46,7 @@ const Header: React.FC = () => {
         {/* Desktop Navigation */}
         <nav className={cn(
           "hidden md:flex items-center transition-all duration-1000 ease-out",
-          isScrolled ? "space-x-12" : "space-x-16"
+          isScrolled ? "space-x-8" : "space-x-12"
         )}>
           <a href="#home" className="text-white/80 hover:text-white transition-colors duration-300 font-medium link-underline font-agency text-lg">Home</a>
           <a href="#about" className="text-white/80 hover:text-white transition-colors duration-300 font-medium link-underline font-agency text-lg">About</a>

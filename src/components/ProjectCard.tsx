@@ -1,13 +1,16 @@
+
 import React from 'react';
 import { ExternalLink, Github } from 'lucide-react';
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+import { cn } from '@/lib/utils';
 
 interface ProjectCardProps {
   title: string;
   description: string;
   image: string;
   tags: string[];
-  demoLink?: string; // Live demo link
-  codeLink?: string; // GitHub repository link
+  demoLink?: string;
+  codeLink?: string;
   index: number;
 }
 
@@ -20,15 +23,24 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   codeLink,
   index,
 }) => {
-  // Function to open the correct Live Demo link in a new tab
+  const { ref, isVisible } = useScrollAnimation<HTMLDivElement>({ 
+    delay: index * 200,
+    threshold: 0.2,
+    rootMargin: '0px 0px -50px 0px'
+  });
+
   const handleOpenDemo = (url: string) => {
-   const formattedURL = url.startsWith("http") ? url : `https://${url}`;
-    window.open(formattedURL, "_blank", "noopener,noreferrer");  };
+    const formattedURL = url.startsWith("http") ? url : `https://${url}`;
+    window.open(formattedURL, "_blank", "noopener,noreferrer");
+  };
 
   return (
     <div 
-      className="relative group bg-black-900 p-6 rounded-2xl transition-transform transform-gpu hover:scale-[1.05] shadow-lg hover:shadow-2xl"
-      style={{ opacity: 0, animation: `fade-in 0.8s ease-out ${0.2 * index}s forwards` }}
+      ref={ref}
+      className={cn(
+        "relative group bg-black-900 p-6 rounded-2xl transition-all duration-800 transform-gpu hover:scale-[1.05] shadow-lg hover:shadow-2xl",
+        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+      )}
     >
       {/* Image Section with Hover Effect */}
       <div className="relative aspect-video overflow-hidden rounded-lg">
