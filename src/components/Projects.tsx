@@ -1,3 +1,4 @@
+
 import React from 'react';
 import ProjectCard from './ProjectCard';
 import AnimatedText from './AnimatedText';
@@ -5,9 +6,21 @@ import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import { cn } from '@/lib/utils';
 
 const Projects: React.FC = () => {
-  const { ref: headerRef, isVisible: headerVisible } = useScrollAnimation<HTMLDivElement>({ delay: 200, threshold: 0.3 });
-  const { ref: gridRef, isVisible: gridVisible } = useScrollAnimation<HTMLDivElement>({ delay: 400, threshold: 0.2 });
-  const { ref: buttonRef, isVisible: buttonVisible } = useScrollAnimation<HTMLDivElement>({ delay: 600, threshold: 0.5 });
+  const { ref: headerRef, isVisible: headerVisible } = useScrollAnimation<HTMLDivElement>({ 
+    delay: 100, 
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  });
+  const { ref: gridRef, isVisible: gridVisible } = useScrollAnimation<HTMLDivElement>({ 
+    delay: 300, 
+    threshold: 0.1,
+    rootMargin: '0px 0px -100px 0px'
+  });
+  const { ref: buttonRef, isVisible: buttonVisible } = useScrollAnimation<HTMLDivElement>({ 
+    delay: 500, 
+    threshold: 0.3,
+    rootMargin: '0px 0px -50px 0px'
+  });
 
   const projects = [
     {
