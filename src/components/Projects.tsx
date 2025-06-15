@@ -34,7 +34,7 @@ const Projects: React.FC = () => {
     {
       title: "PromptToAnimation",
       description: "Visualize any mathematical equations or ML algorithms with beautiful animations and voiceovers just by a single prompt.",
-      image: 'https://thumbs.dreamstime.com/z/black-white-photo-computer-screen-suitable-technology-concepts-black-white-photo-computer-screen-359699076.jpg?ct=jpeg',
+      image: 'https://thumbs.dreamstime.com/b/abstract-connection-dots-technology-background-digital-drawing-black-white-theme-network-concept-abstract-connection-dots-100249947.jpg',
       tags: ["Python", "Manim", "Gemini API"],
       demoLink: "promptanimate.vercel.app",
       codeLink: "https://github.com/dovbyk/manim-video-generator",
@@ -42,7 +42,7 @@ const Projects: React.FC = () => {
     {
       title: "SaveThePac",
       description: "A customized version of the traditional PacMan game. Skip past all the obstacles that come along the way and collect as many points.",
-      image: 'https://as2.ftcdn.net/v2/jpg/13/03/62/91/1000_F_1303629148_Vvl6jtzatoAFjTfeHv6WmL6aCVl8RdZk.jpg',
+      image: 'https://www.shutterstock.com/shutterstock/photos/1654081297/display_1500/stock-vector-spiral-sound-wave-rhythm-line-dynamic-abstract-vector-background-1654081297.jpg',
       tags: ["Java", "Swing"],
       demoLink: "dovbyk.github.io/pacman.js",
       codeLink: "https://github.com/dovbyk/PacMan",
