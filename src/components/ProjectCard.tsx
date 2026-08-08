@@ -71,13 +71,13 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 
         {/* Buttons for Links */}
         <div className="flex items-center gap-4 mt-4">
-          {title === "SaveThePac" && demoLink && (
+          {title === "Langgraph Research Agent" && demoLink && (
             <button
               onClick={() => handleOpenDemo(demoLink)}
               className="px-4 py-2 bg-black-800 hover:bg-gray-700 text-white rounded-md flex items-center gap-2 transition"
             >
               <ExternalLink size={16} />
-              <span>Click to Play</span>
+              <span>Try it</span>
             </button>
           )}
           {title === "DeepScript" && demoLink && (
