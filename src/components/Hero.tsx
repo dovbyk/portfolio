@@ -13,9 +13,6 @@ const Hero: React.FC = () => {
       </div>
       
       <div className="container mx-auto px-4 relative z-10 text-center">
-        <div className="inline-block mb-6 px-6 py-2 border border-white/10 rounded-full backdrop-blur-sm">
-          <span className="text-white/80 font-medium">Computer Science Student</span>
-        </div>
         
         <AnimatedText
           text="Just keep cookin'"
