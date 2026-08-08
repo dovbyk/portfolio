@@ -25,8 +25,8 @@ const Projects: React.FC = () => {
   const projects = [
     {
       title: "Langgraph Research Agent",
-      description: "An agent that researches through the web, measures the quality of answer, and loops till the best and reliable answer is generated along with proper citaions.",
-      image: 'https://www.cipherprojects.com/blog/posts/openai-agents-sdk-vs-langgraph-2026/',
+      description: "An agent that researches through the web, measures the quality of answer, and generates answer along with proper citaions.",
+      image: 'https://pooyagolchian.com/_next/image/?url=%2Fimages%2Fcontent%2Fcrewai-vs-langgraph-autogen-2026.webp&w=1200&q=75',
       tags: ["Langgraph", "Tavily Search Engine"],
       demoLink: "aemond.vercel.app",
       codeLink: "https://github.com/dovbyk/Research-Agent",
