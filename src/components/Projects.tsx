@@ -24,28 +24,28 @@ const Projects: React.FC = () => {
 
   const projects = [
     {
-      title: "DeepScript",
-      description: "A Transformer model which takes handwriting sample from user and converts any digital text into a realistic handwriting ",
-      image: 'https://media.istockphoto.com/id/694960328/photo/male-hands-on-a-laptop-keyboard.jpg?s=612x612&w=0&k=20&c=rKnaYrqm7cmMfA6SMNr_FwdXEuGrwpqFG2K1mPp81wY=',
-      tags: ["Python", "Machine Learning", "React"],
-      demoLink: "deepscript.vercel.app",
-      codeLink: "https://github.com/dovbyk/DeepScript",
+      title: "Langgraph Research Agent",
+      description: "An agent that researches through the web, measures the quality of answer, and loops till the best and reliable answer is generated along with proper citaions.",
+      image: 'https://www.cipherprojects.com/blog/posts/openai-agents-sdk-vs-langgraph-2026/',
+      tags: ["Langgraph", "Tavily Search Engine"],
+      demoLink: "aemond.vercel.app",
+      codeLink: "https://github.com/dovbyk/Research-Agent",
     },
     {
       title: "PromptToAnimation",
       description: "Visualize any mathematical equations or ML algorithms with beautiful animations and voiceovers just by a single prompt.",
       image: 'https://thumbs.dreamstime.com/b/abstract-connection-dots-technology-background-digital-drawing-black-white-theme-network-concept-abstract-connection-dots-100249947.jpg',
-      tags: ["Python", "Manim", "Gemini API"],
+      tags: ["Python", "Manim"],
       demoLink: "promptanimate.vercel.app",
       codeLink: "https://github.com/dovbyk/manim-video-generator",
     },
     {
-      title: "SaveThePac",
-      description: "A customized version of the traditional PacMan game. Skip past all the obstacles that come along the way and collect as many points.",
-      image: 'https://static.vecteezy.com/system/resources/thumbnails/014/927/864/small_2x/futuristic-round-target-animation-for-overlay-hud-display-monitor-for-modern-effects-and-high-technology-free-video.jpg',
-      tags: ["Java", "Swing"],
-      demoLink: "dovbyk.github.io/pacman.js",
-      codeLink: "https://github.com/dovbyk/PacMan",
+      title: "DeepScript",
+      description: "A Transformer model which takes handwriting sample from user and converts any digital text into a realistic handwriting ",
+      image: 'https://media.istockphoto.com/id/694960328/photo/male-hands-on-a-laptop-keyboard.jpg?s=612x612&w=0&k=20&c=rKnaYrqm7cmMfA6SMNr_FwdXEuGrwpqFG2K1mPp81wY=',
+      tags: ["Python", "Machine Learning"],
+      demoLink: "deepscript.vercel.app",
+      codeLink: "https://github.com/dovbyk/DeepScript",
     },
   ];
 
